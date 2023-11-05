@@ -3,6 +3,11 @@
   "affected": {
     "defaultBase": "master"
   },
+  "workspaceLayout": {
+    "projectNameAndRootFormat": "derived",
+    "appsDir": "apps",
+    "libsDir": "libs"
+  },
   "targetDefaults": {
     "build": {
       "cache": true,

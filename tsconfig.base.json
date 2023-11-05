@@ -14,7 +14,27 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@venusta/portal/customer/api": ["libs/portal/customer/api/src/index.ts"],
+      "@venusta/portal/customer/data-access": [
+        "libs/portal/customer/data-access/src/index.ts"
+      ],
+      "@venusta/portal/customer/list": [
+        "libs/portal/customer/feature/list/src/index.ts"
+      ],
+      "@venusta/portal/customer/models": [
+        "libs/portal/customer/models/src/index.ts"
+      ],
+      "@venusta/portal/customer/shell": [
+        "libs/portal/customer/shell/src/index.ts"
+      ],
+      "@venusta/portal/shared/data-access": [
+        "libs/portal/shared/data-access/src/index.ts"
+      ],
+      "@venusta/portal/shared/utils": ["libs/portal/shared/utils/src/index.ts"],
+      "@venusta/portal/shell": ["libs/portal/shell/feature/src/index.ts"],
+      "@venusta/shared/utils": ["libs/shared/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
