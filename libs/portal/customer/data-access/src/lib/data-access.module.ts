@@ -5,6 +5,7 @@ import { provideState } from "@ngrx/store";
 import { provideEffects } from "@ngrx/effects";
 import { customerFeature } from "./customer.feature";
 import { CustomerEffects } from "./customer.effects";
+import { CustomerService } from "./customer.service";
 
 @NgModule({
   imports: [CommonModule],
@@ -12,6 +13,7 @@ import { CustomerEffects } from "./customer.effects";
     provideHttpClient(),
     provideState(customerFeature),
     provideEffects(CustomerEffects),
+    CustomerService
   ]
 })
 export class DataAccessModule {}

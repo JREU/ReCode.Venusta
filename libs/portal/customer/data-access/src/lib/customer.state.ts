@@ -7,5 +7,5 @@ export type State = PortalState & {
 
 export type CustomerState = {
   customers: Customer[] | null;
-  customerId: number | null;
+  customer: Customer | null;
 }

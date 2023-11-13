@@ -1,0 +1,6 @@
+<form class="search" [formGroup]="searchForm" (keyup.enter)="onSubmit()">
+  <mat-form-field subscriptSizing="dynamic">
+    <input type="text" formControlName="search" matInput placeholder="Zoeken">
+    <mat-icon matSuffix color="primary">search</mat-icon>
+  </mat-form-field>
+</form>

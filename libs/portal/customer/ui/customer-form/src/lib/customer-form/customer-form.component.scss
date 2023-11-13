@@ -1,0 +1,24 @@
+.customer-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__first-name,
+  &__last-name,
+  &__phone-number,
+  &__email {
+    flex-grow: 1;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100%;
+    gap: 2rem;
+
+    &--button-container {
+      justify-content: flex-end;
+    }
+  }
+}

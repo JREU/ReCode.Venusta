@@ -9,21 +9,36 @@ import {
 import { Store } from "@ngrx/store";
 import { Customer } from "@venusta/portal/customer/models";
 import { Observable } from "rxjs";
+import { MatTableModule } from "@angular/material/table";
+import { MatButtonModule } from "@angular/material/button";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'venusta-customers',
   standalone: true,
-  imports: [CommonModule, DataAccessModule],
+  imports: [CommonModule, DataAccessModule, MatTableModule, MatButtonModule],
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.scss'],
 })
 export class CustomersComponent implements OnInit {
   private readonly store =  inject(Store<CustomerState>);
+  private readonly router = inject(Router);
+  private readonly activatedRoute = inject(ActivatedRoute);
+
+  protected displayedColumns: string[] = ['firstName', 'lastName', 'email', 'phoneNumber'];
 
   protected customers$!: Observable<Customer[] | null>;
 
   ngOnInit(): void {
     this.store.dispatch(customerPageActions.loadCustomers());
     this.customers$ = this.store.select(customerFeature.selectCustomers);
+  }
+
+  protected onSelect(customerId: number): void {
+    this.router.navigate([customerId], { relativeTo: this.activatedRoute });
+  }
+
+  protected onCreate(): void {
+   this.router.navigate(['nieuw'], { relativeTo: this.activatedRoute });
   }
 }

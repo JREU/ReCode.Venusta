@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "portal.theme";
+@import "variables";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html { font-size: 62.5%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: $background-color-primary;
+}
+
+venusta-root {
+  min-height: 100%;
+}
+
+.mat-mdc-card-header {
+  border-bottom: 0.1rem $border-color-primary solid;
+  padding-bottom: 1rem !important;
+  margin-bottom: 3rem;
+}

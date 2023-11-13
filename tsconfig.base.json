@@ -15,9 +15,18 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@venusta/customer/ui/customer-form": [
+        "libs/portal/customer/ui/customer-form/src/index.ts"
+      ],
       "@venusta/portal/customer/api": ["libs/portal/customer/api/src/index.ts"],
+      "@venusta/portal/customer/create": [
+        "libs/portal/customer/feature/create/src/index.ts"
+      ],
       "@venusta/portal/customer/data-access": [
         "libs/portal/customer/data-access/src/index.ts"
+      ],
+      "@venusta/portal/customer/edit": [
+        "libs/portal/customer/feature/edit/src/index.ts"
       ],
       "@venusta/portal/customer/list": [
         "libs/portal/customer/feature/list/src/index.ts"
@@ -28,11 +37,26 @@
       "@venusta/portal/customer/shell": [
         "libs/portal/customer/shell/src/index.ts"
       ],
+      "@venusta/portal/header/ui/header": [
+        "libs/portal/header/ui/header/src/index.ts"
+      ],
+      "@venusta/portal/search": [
+        "libs/portal/search/feature/search/src/index.ts"
+      ],
+      "@venusta/portal/shared/api": ["libs/portal/shared/api/src/index.ts"],
       "@venusta/portal/shared/data-access": [
         "libs/portal/shared/data-access/src/index.ts"
       ],
       "@venusta/portal/shared/utils": ["libs/portal/shared/utils/src/index.ts"],
-      "@venusta/portal/shell": ["libs/portal/shell/feature/src/index.ts"],
+      "@venusta/portal/shell": [
+        "libs/portal/shell/feature/routes/src/index.ts"
+      ],
+      "@venusta/portal/shell/layout": [
+        "libs/portal/shell/feature/layout/src/index.ts"
+      ],
+      "@venusta/portal/sidebar": [
+        "libs/portal/sidebar/feature/sidebar/src/index.ts"
+      ],
       "@venusta/shared/utils": ["libs/shared/utils/src/index.ts"]
     }
   },

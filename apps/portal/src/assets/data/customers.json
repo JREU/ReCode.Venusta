@@ -1,0 +1,183 @@
+﻿[
+  {
+    "id": 1,
+    "firstName": "Johanna",
+    "lastName": "de Vries",
+    "phoneNumber": "0612-345678",
+    "email": "johanna.devries@example.com",
+    "address": {
+      "street": "Hoofdstraat",
+      "houseNumber": "12",
+      "houseNumberAddition": "A",
+      "postalCode": "1234 AB",
+      "city": "Voorbeeldstad"
+    },
+    "dateOfBirth": "2023-10-15T08:00:00Z",
+    "createdAtUTC": "2023-10-15T08:00:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-15T09:30:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  },
+  {
+    "id": 2,
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "phoneNumber": "0612-345678",
+    "email": "alice.smith@example.com",
+    "address": {
+      "street": "Eikenlaan",
+      "houseNumber": "42",
+      "houseNumberAddition": "",
+      "postalCode": "5432 CD",
+      "city": "Voorbeeldstad"
+    },
+    "createdAtUTC": "2023-10-14T11:45:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-15T10:15:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  },
+  {
+    "id": 3,
+    "firstName": "Eva",
+    "lastName": "Johnson",
+    "phoneNumber": "0612-345678",
+    "email": "eva.johnson@example.com",
+    "address": {
+      "street": "Kastanjelaan",
+      "houseNumber": "7",
+      "houseNumberAddition": "B",
+      "postalCode": "9876 XY",
+      "city": "Voorbeeldstad"
+    },
+    "createdAtUTC": "2023-10-13T14:20:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-15T11:45:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  },
+  {
+    "id": 4,
+    "firstName": "Michael",
+    "lastName": "Brown",
+    "phoneNumber": "0612-345678",
+    "email": "michael.brown@example.com",
+    "address": {
+      "street": "Cederweg",
+      "houseNumber": "55",
+      "houseNumberAddition": "",
+      "postalCode": "1234 AB",
+      "city": "Voorbeeldstad"
+    },
+    "createdAtUTC": "2023-10-12T17:10:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-15T14:30:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  },
+  {
+    "id": 5,
+    "firstName": "Sophia",
+    "lastName": "Wilson",
+    "phoneNumber": "0612-345678",
+    "email": "sophia.wilson@example.com",
+    "address": {
+      "street": "Berkenstraat",
+      "houseNumber": "88",
+      "houseNumberAddition": "",
+      "postalCode": "5432 CD",
+      "city": "Voorbeeldstad"
+    },
+    "createdAtUTC": "2023-10-11T20:05:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-15T17:15:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  },
+  {
+    "id": 6,
+    "firstName": "Liam",
+    "lastName": "Anderson",
+    "phoneNumber": "0612-345678",
+    "email": "liam.anderson@example.com",
+    "address": {
+      "street": "Iepenweg",
+      "houseNumber": "21",
+      "houseNumberAddition": "",
+      "postalCode": "9876 XY",
+      "city": "Voorbeeldstad"
+    },
+    "createdAtUTC": "2023-10-10T22:40:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-15T21:20:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  },
+  {
+    "id": 7,
+    "firstName": "Olivia",
+    "lastName": "Martinez",
+    "phoneNumber": "0612-345678",
+    "email": "olivia.martinez@example.com",
+    "address": {
+      "street": "Dennenlaan",
+      "houseNumber": "32",
+      "houseNumberAddition": "C",
+      "postalCode": "1234 AB",
+      "city": "Voorbeeldstad"
+    },
+    "createdAtUTC": "2023-10-09T09:15:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-15T23:50:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  },
+  {
+    "id": 8,
+    "firstName": "Noah",
+    "lastName": "Garcia",
+    "phoneNumber": "0612-345678",
+    "email": "noah.garcia@example.com",
+    "address": {
+      "street": "Wilgenlaan",
+      "houseNumber": "16",
+      "houseNumberAddition": "",
+      "postalCode": "5432 CD",
+      "city": "Voorbeeldstad"
+    },
+    "createdAtUTC": "2023-10-08T12:30:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-16T08:10:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  },
+  {
+    "id": 9,
+    "firstName": "Ava",
+    "lastName": "Lopez",
+    "phoneNumber": "0612-345678",
+    "email": "ava.lopez@example.com",
+    "address": {
+      "street": "Rozenstraat",
+      "houseNumber": "77",
+      "houseNumberAddition": "",
+      "postalCode": "9876 XY",
+      "city": "Voorbeeldstad"
+    },
+    "createdAtUTC": "2023-10-07T15:50:00Z",
+    "createdBy": "Beheerder",
+    "updatedAtUTC": "2023-10-17T14:15:00Z",
+    "updatedBy": "Gebruiker",
+    "archivedAtUTC": null,
+    "archivedBy": null
+  }
+]

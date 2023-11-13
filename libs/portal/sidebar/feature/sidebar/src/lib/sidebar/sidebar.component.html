@@ -1,0 +1,18 @@
+<aside class="sidebar" [class.sidebar--expanded]="isExpanded$ | async">
+  <nav class="sidebar__navigation">
+    <ul class="sidebar__navigation-list">
+      <li class="sidebar__navigation-list-item">
+        <a class="sidebar__link" [class.sidebar__link--expanded]="isExpanded$ | async" routerLink="afspraken">
+          <mat-icon color="primary" class="sidebar__link-icon" fontIcon="calendar_month"></mat-icon>
+          <span *ngIf="isExpanded$ | async" class="sidebar__link-text">Afspraken</span>
+        </a>
+      </li>
+      <li class="sidebar__navigation-list-item">
+        <a class="sidebar__link" [class.sidebar__link--expanded]="isExpanded$ | async" routerLink="klanten" routerLinkActive="sidebar__link--active">
+          <mat-icon color="primary" class="sidebar__link-icon" fontIcon="group"></mat-icon>
+          <span *ngIf="isExpanded$ | async" class="sidebar__link-text">Klanten</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>

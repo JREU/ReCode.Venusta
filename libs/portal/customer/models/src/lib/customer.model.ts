@@ -7,6 +7,7 @@ export type Customer = {
     phoneNumber: string;
     email: string;
     address: Address;
+    dateOfBirth: Date;
     createdAtUTC: Date;
     createdBy: string;
     updatedAtUTC: Date;

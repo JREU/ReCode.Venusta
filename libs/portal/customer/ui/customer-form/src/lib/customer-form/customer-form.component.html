@@ -1,0 +1,39 @@
+<form [formGroup]="customerForm" class="customer-form" (ngSubmit)="onSubmit()">
+  <div class="customer-form__row">
+    <mat-form-field class="customer-form__first-name">
+      <mat-label>Voornaam</mat-label>
+      <input matInput formControlName="firstName" placeholder="Voornaam">
+    </mat-form-field>
+    <mat-form-field class="customer-form__last-name">
+      <mat-label>Achternaam</mat-label>
+      <input matInput formControlName="lastName" placeholder="Achternaam">
+    </mat-form-field>
+  </div>
+  <div class="customer-form__row">
+    <mat-form-field class="customer-form__date-of-birth">
+      <mat-label>Geboortedatum</mat-label>
+      <input matInput formControlName="dateOfBirth" [matDatepicker]="datepicker">
+      <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+      <mat-datepicker #datepicker>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>Annuleren</button>
+          <button mat-raised-button color="primary" matDatepickerApply>Bevestigen</button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="customer-form__phone-number">
+      <mat-label>Telefoonnummer</mat-label>
+      <input matInput formControlName="phoneNumber" placeholder="Telefoonnummer">
+    </mat-form-field>
+
+  </div>
+
+  <mat-form-field class="customer-form__email">
+    <mat-label>E-mail</mat-label>
+    <input matInput formControlName="email" placeholder="E-mail">
+  </mat-form-field>
+
+  <div class="customer-form__row customer-form__row--button-container">
+    <button mat-raised-button color="primary" type="submit">Opslaan</button>
+  </div>
+</form>

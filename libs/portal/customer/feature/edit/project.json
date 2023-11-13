@@ -1,0 +1,27 @@
+{
+  "name": "portal-customer-feature-edit",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/portal/customer/feature/edit/src",
+  "prefix": "venusta",
+  "tags": ["scope:portal", "domain:customer", "type:feature"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/portal/customer/feature/edit/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/portal/customer/feature/edit/**/*.ts",
+          "libs/portal/customer/feature/edit/**/*.html"
+        ]
+      }
+    }
+  }
+}

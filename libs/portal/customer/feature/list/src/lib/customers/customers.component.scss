@@ -1,0 +1,12 @@
+.customers {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__table{
+    &-row--content:hover {
+      cursor: pointer;
+      background: whitesmoke;
+    }
+  }
+}
