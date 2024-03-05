@@ -1,9 +1,13 @@
 ﻿import { Route } from "@angular/router";
+import { provideCustomerDataAccess } from "@venusta/portal/customer/data-access";
 
 export const customerRoutes: Route[] = [
   {
     path: '',
-    loadComponent: () => import('@venusta/portal/customer/list').then(m => m.CustomersComponent)
+    loadComponent: () => import('@venusta/portal/customer/list').then(m => m.CustomersComponent),
+    providers: [
+      provideCustomerDataAccess()
+    ]
   },
   {
     path: 'nieuw',
@@ -12,5 +16,5 @@ export const customerRoutes: Route[] = [
   {
     path: ':customerId',
     loadComponent: () => import('@venusta/portal/customer/edit').then(m => m.EditCustomerComponent)
-  }
+  },
 ];

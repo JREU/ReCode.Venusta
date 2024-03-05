@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  DataAccessModule,
   customerPageActions,
   CustomerState,
   customerFeature
@@ -14,12 +13,11 @@ import { MatButtonModule } from "@angular/material/button";
 import { ActivatedRoute, Router } from "@angular/router";
 import { CustomerFormComponent } from "@venusta/customer/ui/customer-form";
 import { MatCardModule } from "@angular/material/card";
-import { TableDirective } from "../../../../../../shared/directives/src/lib/table.directive";
 
 @Component({
   selector: 'venusta-customers',
   standalone: true,
-  imports: [CommonModule, DataAccessModule, MatTableModule, MatButtonModule, CustomerFormComponent, MatCardModule],
+  imports: [CommonModule, MatTableModule, MatButtonModule, CustomerFormComponent, MatCardModule],
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.scss'],
 })

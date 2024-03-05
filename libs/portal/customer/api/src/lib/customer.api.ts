@@ -1,9 +1,9 @@
 ﻿import { inject, Injectable } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { customerFeature, customerPageActions, CustomerState } from "@venusta/portal/customer/data-access";
-import { filterDefined } from "@venusta/shared/utils";
-import { map, Observable, tap } from "rxjs";
+import { map, Observable } from "rxjs";
 import { SearchResult } from "@venusta/portal/shared/models";
+import { filterNullAndUndefined } from "@recode/utilities";
 
 @Injectable()
 export class CustomerApi {
@@ -12,7 +12,7 @@ export class CustomerApi {
     this.store.dispatch(customerPageActions.searchCustomer({ query }));
     return this.store.select(customerFeature.selectSearchResult)
       .pipe(
-        filterDefined,
+        filterNullAndUndefined(),
         map(customers =>
             customers.map(customer => ({
               title: `${customer.firstName} ${customer.lastName}`,

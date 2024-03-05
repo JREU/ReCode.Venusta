@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { Observable } from "rxjs";
 import { MatIconModule } from "@angular/material/icon";
-import { PortalDataAccessModule, PortalState } from '@venusta/portal/shared/data-access';
+import { PortalState } from '@venusta/portal/shared/data-access';
 import { Store } from "@ngrx/store";
 import { portalFeature } from "@venusta/portal/shared/data-access";
 
 @Component({
   selector: 'venusta-sidebar',
   standalone: true,
-  imports: [CommonModule, RouterLink, MatIconModule, PortalDataAccessModule, RouterLinkActive],
+  imports: [CommonModule, RouterLink, MatIconModule, RouterLinkActive],
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })

@@ -4,13 +4,12 @@ import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 import { Store } from "@ngrx/store";
-import { DataAccessModule, searchPageActions, SearchState } from "@venusta/portal/search/data-access";
-import { SearchApiModule } from "@venusta/portal/search/api";
+import { searchPageActions, SearchState } from "@venusta/portal/search/data-access";
 
 @Component({
   selector: 'venusta-search',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatInputModule, MatIconModule, SearchApiModule, DataAccessModule],
+  imports: [CommonModule, ReactiveFormsModule, MatInputModule, MatIconModule],
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })

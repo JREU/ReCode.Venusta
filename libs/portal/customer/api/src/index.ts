@@ -1,2 +1,2 @@
-export * from './lib/api.module';
 export * from './lib/customer.api';
+export * from './lib/customer-api.provider';

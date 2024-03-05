@@ -2,7 +2,7 @@
 import { Customer } from "@venusta/portal/customer/models";
 import { map, Observable, of, tap, throwError } from "rxjs";
 import { HttpClient } from "@angular/common/http";
-import { filterDefined } from "@venusta/shared/utils";
+import { filterNullAndUndefined } from "@recode/utilities";
 
 @Injectable()
 export class CustomerService {
@@ -11,13 +11,13 @@ export class CustomerService {
   getAll(query: string | null = null): Observable<Customer[]> {
     return this.http.get<Customer[]>('./assets/data/customers.json')
       .pipe(
-        filterDefined,
+        filterNullAndUndefined(),
         map(customers => query ? customers.filter(customer => customer.email.toLowerCase().includes(query.toLowerCase()) || customer.firstName.toLowerCase().includes(query.toLowerCase()) || customer.lastName.toLowerCase().includes(query.toLowerCase())) : customers)
       );
   }
 
   get(customerId: number): Observable<Customer> {
-    return this.http.get<Customer[]>('./assets/data/customers.json').pipe(filterDefined, map(customers => {
+    return this.http.get<Customer[]>('./assets/data/customers.json').pipe(filterNullAndUndefined(), map(customers => {
       const customer = customers.find(customer => customer.id === customerId);
 
       if(!customer){

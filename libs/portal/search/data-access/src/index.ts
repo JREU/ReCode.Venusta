@@ -1,3 +1,3 @@
 export * from './lib/search.state';
-export * from './lib/data-access.module';
+export * from './lib/search-data-access.provider';
 export * from './lib/actions';

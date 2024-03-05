@@ -5,19 +5,18 @@ import { Customer } from "@venusta/portal/customer/models";
 import {
   customerFeature,
   customerPageActions,
-  CustomerState,
-  DataAccessModule
+  CustomerState
 } from "@venusta/portal/customer/data-access";
 import { ActivatedRoute } from "@angular/router";
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
-import { filterDefined } from "@venusta/shared/utils";
 import { MatCardModule } from "@angular/material/card";
+import { filterNullAndUndefined } from "@recode/utilities";
 
 @Component({
   selector: 'venusta-edit-customer',
   standalone: true,
-  imports: [CommonModule, CustomerFormComponent, DataAccessModule, MatCardModule],
+  imports: [CommonModule, CustomerFormComponent, MatCardModule],
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.scss'],
 })
@@ -29,7 +28,7 @@ export class EditCustomerComponent implements OnInit {
   ngOnInit(): void {
     const customerId = parseInt(this.route.snapshot.paramMap.get('customerId') ?? '');
     this.store.dispatch(customerPageActions.loadCustomer({ customerId }));
-    this.customer$ = this.store.select(customerFeature.selectCustomer).pipe(filterDefined);
+    this.customer$ = this.store.select(customerFeature.selectCustomer).pipe(filterNullAndUndefined());
   }
 
   onSubmit(updatedCustomer: Partial<Customer>, customer: Customer): void {

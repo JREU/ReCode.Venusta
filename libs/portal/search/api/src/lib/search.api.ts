@@ -1,8 +1,8 @@
 ﻿import { inject, Injectable } from "@angular/core";
-import { filterDefined } from "@venusta/shared/utils";
 import { map, Observable } from "rxjs";
 import { CustomerApi } from "@venusta/portal/customer/api";
 import { SearchResults } from "@venusta/portal/shared/models";
+import { filterNullAndUndefined } from "@recode/utilities";
 
 @Injectable()
 export class SearchApi {
@@ -10,7 +10,7 @@ export class SearchApi {
   search(query: string): Observable<SearchResults> {
     return this.customerApi.search(query)
       .pipe(
-        filterDefined,
+        filterNullAndUndefined(),
         map(customers => ({ results: customers } as SearchResults)));
   }
 }
