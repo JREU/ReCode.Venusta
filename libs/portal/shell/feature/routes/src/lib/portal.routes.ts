@@ -10,6 +10,11 @@ export const portalRoutes: Route[] = [
         path: `${RouterUtil.Configuration.Customers}`,
         loadChildren: async () => (await import('@venusta/portal/customer/shell')).customerRoutes,
         title: `Klanten ${RouterUtil.Settings.TitlePostfix}`
+      },
+      {
+        path: `${RouterUtil.Configuration.Search}`,
+        loadChildren: async () => (await import('@venusta/portal/search/shell')).searchRoutes,
+        title: `Zoekresultaten ${RouterUtil.Settings.TitlePostfix}`
       }
     ]
   }

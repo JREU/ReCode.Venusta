@@ -1,6 +1,7 @@
 ﻿export class RouterUtil {
   static Configuration = {
-    Customers: 'klanten'
+    Customers: 'klanten',
+    Search: 'zoeken'
   };
 
   static Settings = {

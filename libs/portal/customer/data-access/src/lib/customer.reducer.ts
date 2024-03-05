@@ -5,7 +5,9 @@ import { customerPageActions } from "@venusta/portal/customer/data-access";
 
 const initialState: CustomerState = {
   customers: null,
-  customer: null
+  customer: null,
+  searchQuery: null,
+  searchResult: null
 }
 
 export const customerReducer = createReducer<CustomerState>(
@@ -35,5 +37,13 @@ export const customerReducer = createReducer<CustomerState>(
   on(customerApiActions.customerUpdatedSuccess, (state, { updatedCustomer }) => ({
     ...state,
     customer: updatedCustomer
-  }))
+  })),
+  on(customerApiActions.customersSearchSuccess, (state, { customers }) => ({
+    ...state,
+    searchResult: customers
+  })),
+  on(customerApiActions.customersSearchFailure, (state) => ({
+    ...state,
+    searchResult: null
+  })),
 );

@@ -43,9 +43,26 @@
       "@venusta/portal/search": [
         "libs/portal/search/feature/search/src/index.ts"
       ],
+      "@venusta/portal/search/api": ["libs/portal/search/api/src/index.ts"],
+      "@venusta/portal/search/data-access": [
+        "libs/portal/search/data-access/src/index.ts"
+      ],
+      "@venusta/portal/search/models": [
+        "libs/portal/search/models/src/index.ts"
+      ],
+      "@venusta/portal/search/search-result": [
+        "libs/portal/search/feature/search-result/src/index.ts"
+      ],
+      "@venusta/portal/search/shell": ["libs/portal/search/shell/src/index.ts"],
       "@venusta/portal/shared/api": ["libs/portal/shared/api/src/index.ts"],
       "@venusta/portal/shared/data-access": [
         "libs/portal/shared/data-access/src/index.ts"
+      ],
+      "@venusta/portal/shared/directives": [
+        "libs/portal/shared/directives/src/index.ts"
+      ],
+      "@venusta/portal/shared/models": [
+        "libs/portal/shared/models/src/index.ts"
       ],
       "@venusta/portal/shared/utils": ["libs/portal/shared/utils/src/index.ts"],
       "@venusta/portal/shell": [

@@ -1,0 +1,13 @@
+<div class="search-results">
+@if(results$ | async; as response) {
+  @for(result of response.results; track result.url){
+    <div class="search-results__result">
+      <h1>{{result.title}}</h1>
+      <p>{{result.description}}</p>
+      <a [routerLink]="result.url">{{ result.url }}</a>
+    </div>
+  }
+}@else{
+  <p>Geen resultaten gevonden</p>
+}
+</div>

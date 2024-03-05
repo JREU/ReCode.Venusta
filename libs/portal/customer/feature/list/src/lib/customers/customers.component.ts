@@ -12,11 +12,14 @@ import { Observable } from "rxjs";
 import { MatTableModule } from "@angular/material/table";
 import { MatButtonModule } from "@angular/material/button";
 import { ActivatedRoute, Router } from "@angular/router";
+import { CustomerFormComponent } from "@venusta/customer/ui/customer-form";
+import { MatCardModule } from "@angular/material/card";
+import { TableDirective } from "../../../../../../shared/directives/src/lib/table.directive";
 
 @Component({
   selector: 'venusta-customers',
   standalone: true,
-  imports: [CommonModule, DataAccessModule, MatTableModule, MatButtonModule],
+  imports: [CommonModule, DataAccessModule, MatTableModule, MatButtonModule, CustomerFormComponent, MatCardModule],
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.scss'],
 })

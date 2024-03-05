@@ -8,6 +8,7 @@ export const customerPageActions = createActionGroup({
     loadCustomer: props<{ customerId: number }>(),
     deleteCustomer: props<{ customerId: number }>(),
     createCustomer: props<{ customer: Omit<Customer, "id"> }>(),
-    updateCustomer: props<{ customer: Customer }>()
+    updateCustomer: props<{ customer: Customer }>(),
+    searchCustomer: props<{ query: string }>()
   }
 });

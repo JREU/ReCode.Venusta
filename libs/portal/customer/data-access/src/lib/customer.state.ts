@@ -8,4 +8,6 @@ export type State = PortalState & {
 export type CustomerState = {
   customers: Customer[] | null;
   customer: Customer | null;
+  searchQuery: string | null;
+  searchResult: Customer[] | null;
 }

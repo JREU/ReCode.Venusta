@@ -22,6 +22,16 @@ export class CustomerEffects {
     )
   });
 
+  searchCustomers$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(customerPageActions.searchCustomer),
+      mergeMap((action) => this.customerService.getAll(action.query).pipe(
+        map((customers) => customerApiActions.customersSearchSuccess({ customers })),
+        catchError(error => of(customerApiActions.customersSearchFailure({error})))
+      ))
+    )
+  });
+
   loadCustomer$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(customerPageActions.loadCustomer),

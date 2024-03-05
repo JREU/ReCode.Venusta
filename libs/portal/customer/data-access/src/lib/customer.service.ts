@@ -1,6 +1,6 @@
 ﻿import { inject, Injectable } from "@angular/core";
 import { Customer } from "@venusta/portal/customer/models";
-import { map, Observable, of, throwError } from "rxjs";
+import { map, Observable, of, tap, throwError } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { filterDefined } from "@venusta/shared/utils";
 
@@ -8,8 +8,12 @@ import { filterDefined } from "@venusta/shared/utils";
 export class CustomerService {
   private readonly http = inject(HttpClient);
 
-  getAll(): Observable<Customer[]> {
-    return this.http.get<Customer[]>('./assets/data/customers.json').pipe(filterDefined);
+  getAll(query: string | null = null): Observable<Customer[]> {
+    return this.http.get<Customer[]>('./assets/data/customers.json')
+      .pipe(
+        filterDefined,
+        map(customers => query ? customers.filter(customer => customer.email.toLowerCase().includes(query.toLowerCase()) || customer.firstName.toLowerCase().includes(query.toLowerCase()) || customer.lastName.toLowerCase().includes(query.toLowerCase())) : customers)
+      );
   }
 
   get(customerId: number): Observable<Customer> {

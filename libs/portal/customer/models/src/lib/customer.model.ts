@@ -10,8 +10,8 @@ export type Customer = {
     dateOfBirth: Date;
     createdAtUTC: Date;
     createdBy: string;
-    updatedAtUTC: Date;
-    updatedBy: string;
-    archivedAtUTC: Date;
-    archivedBy: string;
+    updatedAtUTC: Date | null;
+    updatedBy: string | null;
+    archivedAtUTC: Date | null;
+    archivedBy: string | null;
 }

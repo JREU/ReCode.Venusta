@@ -15,5 +15,7 @@ export const customerApiActions = createActionGroup({
     customerCreatedFailure: props<{ error: HttpErrorResponse }>(),
     customerUpdatedSuccess: props<{ updatedCustomer: Customer }>(),
     customerUpdatedFailure: props<{ error: HttpErrorResponse }>(),
+    customersSearchSuccess: props<{ customers: Customer[] }>(),
+    customersSearchFailure: props<{ error: HttpErrorResponse }>(),
   }
 });
