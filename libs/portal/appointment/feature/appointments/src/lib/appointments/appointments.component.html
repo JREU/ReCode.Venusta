@@ -1,4 +1,6 @@
 <div class="appointments">
+  <full-calendar [options]="calendarOptions"></full-calendar>
+
   @if(appointments$ | async; as appointments){
     <pre>
     {{ appointments | json }}
