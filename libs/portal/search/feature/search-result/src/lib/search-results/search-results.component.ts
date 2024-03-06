@@ -5,16 +5,17 @@ import { SearchState } from "@venusta/portal/search/data-access";
 import { searchFeature } from "../../../../../data-access/src/lib/search.feature";
 import { Observable } from "rxjs";
 import { SearchResults } from "@venusta/portal/shared/models";
-import { RouterLink } from "@angular/router";
+import { SearchResultComponent } from "@venusta/portal/search/ui/search-result";
+import { MatList, MatListSubheaderCssMatStyler, MatNavList } from "@angular/material/list";
 
 @Component({
-  selector: 'venusta-search-result',
+  selector: 'venusta-search-results',
   standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './search-result.component.html',
-  styleUrls: ['./search-result.component.scss'],
+  imports: [CommonModule, SearchResultComponent, MatList, MatListSubheaderCssMatStyler, MatNavList],
+  templateUrl: './search-results.component.html',
+  styleUrls: ['./search-results.component.scss'],
 })
-export class SearchResultComponent implements OnInit {
+export class SearchResultsComponent implements OnInit {
   private readonly store = inject(Store<SearchState>);
 
   results$!: Observable<SearchResults | null>;

@@ -1,0 +1,12 @@
+<div class="search-results">
+@if(results$ | async; as response) {
+  <mat-nav-list>
+    <div mat-subheader>Zoekresultaten</div>
+    @for(result of response.results; track result.url){
+      <venusta-search-result [searchResult]="result" />
+    }
+  </mat-nav-list>
+}@else{
+  <p>Geen resultaten gevonden</p>
+}
+</div>

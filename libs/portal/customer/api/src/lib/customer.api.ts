@@ -2,7 +2,7 @@
 import { Store } from "@ngrx/store";
 import { customerFeature, customerPageActions, CustomerState } from "@venusta/portal/customer/data-access";
 import { map, Observable } from "rxjs";
-import { SearchResult } from "@venusta/portal/shared/models";
+import { SearchResult, SearchResultType } from "@venusta/portal/shared/models";
 import { filterNullAndUndefined } from "@recode/utilities";
 
 @Injectable()
@@ -17,7 +17,8 @@ export class CustomerApi {
             customers.map(customer => ({
               title: `${customer.firstName} ${customer.lastName}`,
               description: customer.email,
-              url: `/klanten/${customer.id}`
+              url: `/klanten/${customer.id}`,
+              type: SearchResultType.Customer
             } as SearchResult))
         ));
   }

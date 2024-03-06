@@ -18,6 +18,12 @@
       "@venusta/customer/ui/customer-form": [
         "libs/portal/customer/ui/customer-form/src/index.ts"
       ],
+      "@venusta/portal/appointment/appointments": [
+        "libs/portal/appointment/feature/appointments/src/index.ts"
+      ],
+      "@venusta/portal/appointment/shell": [
+        "libs/portal/appointment/shell/src/index.ts"
+      ],
       "@venusta/portal/customer/api": ["libs/portal/customer/api/src/index.ts"],
       "@venusta/portal/customer/create": [
         "libs/portal/customer/feature/create/src/index.ts"
@@ -54,6 +60,9 @@
         "libs/portal/search/feature/search-result/src/index.ts"
       ],
       "@venusta/portal/search/shell": ["libs/portal/search/shell/src/index.ts"],
+      "@venusta/portal/search/ui/search-result": [
+        "libs/portal/search/ui/search-result/src/index.ts"
+      ],
       "@venusta/portal/shared/api": ["libs/portal/shared/api/src/index.ts"],
       "@venusta/portal/shared/data-access": [
         "libs/portal/shared/data-access/src/index.ts"
