@@ -21,6 +21,12 @@
       "@venusta/portal/appointment/appointments": [
         "libs/portal/appointment/feature/appointments/src/index.ts"
       ],
+      "@venusta/portal/appointment/data-access": [
+        "libs/portal/appointment/data-access/src/index.ts"
+      ],
+      "@venusta/portal/appointment/models": [
+        "libs/portal/appointment/models/src/index.ts"
+      ],
       "@venusta/portal/appointment/shell": [
         "libs/portal/appointment/shell/src/index.ts"
       ],

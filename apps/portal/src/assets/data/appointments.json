@@ -1,0 +1,162 @@
+﻿[
+  {
+    "id": 1,
+    "customerId": 101,
+    "startAt": "2024-03-07T10:00:00.000Z",
+    "endAt": "2024-03-07T11:00:00.000Z",
+    "services": [1, 2],
+    "description": "Afspraak 1"
+  },
+  {
+    "id": 2,
+    "customerId": 102,
+    "startAt": "2024-03-08T14:30:00.000Z",
+    "endAt": "2024-03-08T15:30:00.000Z",
+    "services": [3],
+    "description": "Afspraak 2"
+  },
+  {
+    "id": 3,
+    "customerId": 103,
+    "startAt": "2024-03-10T09:00:00.000Z",
+    "endAt": "2024-03-10T10:00:00.000Z",
+    "services": [2],
+    "description": "Afspraak 3"
+  },
+  {
+    "id": 4,
+    "customerId": 104,
+    "startAt": "2024-03-12T16:00:00.000Z",
+    "endAt": "2024-03-12T17:30:00.000Z",
+    "services": [1, 3],
+    "description": "Afspraak 4"
+  },
+  {
+    "id": 5,
+    "customerId": 105,
+    "startAt": "2024-03-15T11:30:00.000Z",
+    "endAt": "2024-03-15T12:30:00.000Z",
+    "services": [2],
+    "description": "Afspraak 5"
+  },
+  {
+    "id": 6,
+    "customerId": 106,
+    "startAt": "2024-03-18T13:00:00.000Z",
+    "endAt": "2024-03-18T14:00:00.000Z",
+    "services": [3],
+    "description": "Afspraak 6"
+  },
+  {
+    "id": 7,
+    "customerId": 107,
+    "startAt": "2024-03-20T09:30:00.000Z",
+    "endAt": "2024-03-20T11:00:00.000Z",
+    "services": [1, 2],
+    "description": "Afspraak 7"
+  },
+  {
+    "id": 8,
+    "customerId": 108,
+    "startAt": "2024-03-22T15:00:00.000Z",
+    "endAt": "2024-03-22T16:30:00.000Z",
+    "services": [1],
+    "description": "Afspraak 8"
+  },
+  {
+    "id": 9,
+    "customerId": 109,
+    "startAt": "2024-03-24T12:00:00.000Z",
+    "endAt": "2024-03-24T13:00:00.000Z",
+    "services": [2, 3],
+    "description": "Afspraak 9"
+  },
+  {
+    "id": 10,
+    "customerId": 110,
+    "startAt": "2024-03-26T08:30:00.000Z",
+    "endAt": "2024-03-26T10:00:00.000Z",
+    "services": [3],
+    "description": "Afspraak 10"
+  },
+  {
+    "id": 11,
+    "customerId": 111,
+    "startAt": "2024-03-28T14:00:00.000Z",
+    "endAt": "2024-03-28T15:30:00.000Z",
+    "services": [1, 2],
+    "description": "Afspraak 11"
+  },
+  {
+    "id": 12,
+    "customerId": 112,
+    "startAt": "2024-03-30T10:30:00.000Z",
+    "endAt": "2024-03-30T11:30:00.000Z",
+    "services": [2],
+    "description": "Afspraak 12"
+  },
+  {
+    "id": 13,
+    "customerId": 113,
+    "startAt": "2024-04-02T13:30:00.000Z",
+    "endAt": "2024-04-02T15:00:00.000Z",
+    "services": [3],
+    "description": "Afspraak 13"
+  },
+  {
+    "id": 14,
+    "customerId": 114,
+    "startAt": "2024-04-04T11:00:00.000Z",
+    "endAt": "2024-04-04T12:30:00.000Z",
+    "services": [1, 3],
+    "description": "Afspraak 14"
+  },
+  {
+    "id": 15,
+    "customerId": 115,
+    "startAt": "2024-04-06T16:30:00.000Z",
+    "endAt": "2024-04-06T17:30:00.000Z",
+    "services": [2],
+    "description": "Afspraak 15"
+  },
+  {
+    "id": 16,
+    "customerId": 116,
+    "startAt": "2024-04-08T09:30:00.000Z",
+    "endAt": "2024-04-08T11:00:00.000Z",
+    "services": [1, 2],
+    "description": "Afspraak 16"
+  },
+  {
+    "id": 17,
+    "customerId": 117,
+    "startAt": "2024-04-10T15:00:00.000Z",
+    "endAt": "2024-04-10T16:30:00.000Z",
+    "services": [1],
+    "description": "Afspraak 17"
+  },
+  {
+    "id": 18,
+    "customerId": 118,
+    "startAt": "2024-04-12T12:00:00.000Z",
+    "endAt": "2024-04-12T13:00:00.000Z",
+    "services": [2, 3],
+    "description": "Afspraak 18"
+  },
+  {
+    "id": 19,
+    "customerId": 119,
+    "startAt": "2024-04-14T08:30:00.000Z",
+    "endAt": "2024-04-14T10:00:00.000Z",
+    "services": [3],
+    "description": "Afspraak 19"
+  },
+  {
+    "id": 20,
+    "customerId": 120,
+    "startAt": "2024-04-16T14:00:00.000Z",
+    "endAt": "2024-04-16T15:30:00.000Z",
+    "services": [1, 2],
+    "description": "Afspraak 20"
+  }
+]

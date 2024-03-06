@@ -2,7 +2,7 @@
   <nav class="sidebar__navigation">
     <ul class="sidebar__navigation-list">
       <li class="sidebar__navigation-list-item">
-        <a class="sidebar__link" [class.sidebar__link--expanded]="isExpanded$ | async" routerLink="afspraken">
+        <a class="sidebar__link" [class.sidebar__link--expanded]="isExpanded$ | async" routerLink="afspraken" routerLinkActive="sidebar__link--active">
           <mat-icon color="primary" class="sidebar__link-icon" fontIcon="calendar_month"></mat-icon>
           <span *ngIf="isExpanded$ | async" class="sidebar__link-text">Afspraken</span>
         </a>

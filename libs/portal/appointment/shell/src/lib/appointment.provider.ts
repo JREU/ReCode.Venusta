@@ -1,9 +1,8 @@
 ﻿import { EnvironmentProviders, makeEnvironmentProviders } from "@angular/core";
-import { provideCustomerDataAccess } from "@venusta/portal/customer/data-access";
-import { provideCustomerApi } from "@venusta/portal/customer/api";
+import { provideAppointmentDataAccess } from "@venusta/portal/appointment/data-access";
 
 export function provideAppointment(): EnvironmentProviders {
   return makeEnvironmentProviders([
-
+    provideAppointmentDataAccess()
   ]);
 }

@@ -1,6 +1,7 @@
 ﻿export class StoreUtil {
-  static FeatureKeys = {
+  static readonly FeatureKeys = {
     Customer: 'customer',
+    Appointment: 'appointment',
     Portal: 'portal',
     Search: 'search'
   };
