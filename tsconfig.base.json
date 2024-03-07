@@ -30,6 +30,12 @@
       "@venusta/portal/appointment/shell": [
         "libs/portal/appointment/shell/src/index.ts"
       ],
+      "@venusta/portal/appointment/ui/schedule": [
+        "libs/portal/appointment/ui/schedule/src/index.ts"
+      ],
+      "@venusta/portal/appointment/utils": [
+        "libs/portal/appointment/utils/src/index.ts"
+      ],
       "@venusta/portal/customer/api": ["libs/portal/customer/api/src/index.ts"],
       "@venusta/portal/customer/create": [
         "libs/portal/customer/feature/create/src/index.ts"

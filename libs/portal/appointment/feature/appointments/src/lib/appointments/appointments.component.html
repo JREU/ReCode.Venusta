@@ -1,9 +1,9 @@
 <div class="appointments">
-  <full-calendar [options]="calendarOptions"></full-calendar>
 
-  @if(appointments$ | async; as appointments){
-    <pre>
-    {{ appointments | json }}
-      </pre>
+
+  @if(events$ | async; as events){
+    <venusta-schedule [events]="events"
+                      (eventSelected)="onEventSelect($event)"
+                      (slotSelected)="onSlotSelect($event)"/>
   }
 </div>

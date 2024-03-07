@@ -1,0 +1,20 @@
+{
+  "name": "schedule",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/portal/appointment/ui/schedule/src",
+  "prefix": "venusta",
+  "tags": ["scope:portal", "domain:appointment", "type:ui"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/portal/appointment/ui/schedule/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

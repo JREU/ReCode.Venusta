@@ -1,0 +1,27 @@
+@import "apps/portal/src/portal.theme";
+
+:host ::ng-deep {
+  .fc-button {
+    transition: all .3s linear;
+  }
+
+  .fc-button-primary,
+  .fc th{
+    background-color: map-get($my-primary, 900);
+    border-color: map-get($my-primary, 100);
+    color: map-get($my-primary, 100);
+  }
+
+  .fc-button-active {
+    background-color: map-get($my-primary, 100) !important;
+  }
+
+  .fc-daygrid-day.fc-day-today,
+  .fc-timegrid-col.fc-day-today {
+    background-color: map-get($my-primary, 100) !important;
+  }
+
+  .fc-daygrid-event-dot{
+    border-color: map-get($my-primary, 900) !important;
+  }
+}
