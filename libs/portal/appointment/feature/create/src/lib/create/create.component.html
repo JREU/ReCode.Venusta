@@ -1,0 +1,33 @@
+<form [formGroup]="createAppointmentForm" (ngSubmit)="onSubmit()">
+  <div class="card flex justify-content-center">
+    <span class="p-float-label">
+
+      <label for="appointment-date">Datum</label>
+    </span>
+
+    <span class="p-float-label">
+
+      <label for="appointment-start-time">Starttijd</label>
+    </span>
+
+    <span class="p-float-label">
+      <label for="appointment-end-time">Eindtijd</label>
+    </span>
+
+
+
+    <pre>
+      {{createAppointmentForm.value | json}}
+    </pre>
+
+    <div class="flex align-items-center gap-2">
+
+    </div>
+
+  </div>
+</form>
+
+
+
+
+

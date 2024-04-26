@@ -17,7 +17,6 @@
         "tsConfig": "apps/portal/tsconfig.app.json",
         "assets": ["apps/portal/src/favicon.ico", "apps/portal/src/assets"],
         "styles": [
-          "@angular/material/prebuilt-themes/indigo-pink.css",
           "apps/portal/src/styles.scss"
         ],
         "scripts": []

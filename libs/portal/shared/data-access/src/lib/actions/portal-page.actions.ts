@@ -1,8 +1,10 @@
-﻿import { createActionGroup, emptyProps, props } from "@ngrx/store";
+﻿import { createActionGroup, emptyProps } from '@ngrx/store';
 
 export const portalPageActions = createActionGroup({
   source: 'Portal Page',
   events: {
-    toggleSidebar: emptyProps
-  }
+    toggleSidebar: emptyProps,
+    toggleProfileMenu: emptyProps,
+    toggleDarkMode: emptyProps,
+  },
 });

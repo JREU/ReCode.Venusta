@@ -3,17 +3,19 @@ import { CommonModule } from '@angular/common';
 import { appointmentFeature, appointmentPageActions, AppointmentState } from "@venusta/portal/appointment/data-access";
 import { Store } from "@ngrx/store";
 import { map, Observable } from "rxjs";
-import { Appointment } from "@venusta/portal/appointment/models";
+import { Appointment, TimeSlot } from "@venusta/portal/appointment/models";
 import { filterNullAndUndefined } from "@recode/utilities";
 import { FullCalendarModule } from "@fullcalendar/angular";
 import { ScheduleComponent } from "@venusta/portal/appointment/ui/schedule";
 import { EventSourceInput } from "@fullcalendar/core";
 import { SchedulerUtils } from "@venusta/portal/appointment/utils";
+import { CreateComponent } from "@venusta/portal/appointment/create";
+import { CardComponent } from "@venusta/shared/ui";
 
 @Component({
   selector: 'venusta-appointments',
   standalone: true,
-  imports: [CommonModule, FullCalendarModule, ScheduleComponent],
+  imports: [CommonModule, FullCalendarModule, ScheduleComponent, CreateComponent, CardComponent],
   templateUrl: './appointments.component.html',
   styleUrl: './appointments.component.scss',
 })
@@ -22,6 +24,8 @@ export class AppointmentsComponent implements OnInit {
 
   private appointments$!: Observable<Appointment[]>;
   protected events$!: Observable<EventSourceInput>;
+
+  protected selectedTimeSlot!: TimeSlot;
 
   ngOnInit(): void {
     this.store.dispatch(appointmentPageActions.loadAppointments());
@@ -33,7 +37,7 @@ export class AppointmentsComponent implements OnInit {
     console.log(event);
   }
 
-  protected onSlotSelect(slot: any): void {
-    console.log(slot);
+  protected onSlotSelect(timeSlot: TimeSlot): void {
+    console.log('timeslot set');
   }
 }

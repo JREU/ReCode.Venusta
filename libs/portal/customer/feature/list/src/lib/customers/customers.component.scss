@@ -1,18 +1,13 @@
+@use "apps/portal/src/theme";
 .customers {
   &__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    align-items: center;
   }
 
   &__title {
     margin: 0;
-  }
-
-  &__table{
-    &-row--content:hover {
-      cursor: pointer;
-      background: whitesmoke;
-    }
   }
 }

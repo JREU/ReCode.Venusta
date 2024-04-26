@@ -1,0 +1,5 @@
+@use 'apps/portal/src/variables';
+
+:host{
+  @apply bg-slate-800 p-6 w-full rounded-md dark:bg-slate-950;
+}

@@ -5,11 +5,12 @@ import { MatCardModule } from "@angular/material/card";
 import { Store } from "@ngrx/store";
 import { customerPageActions, CustomerState } from "@venusta/portal/customer/data-access";
 import { Customer } from "@venusta/portal/customer/models";
+import { CardComponent } from "@venusta/shared/ui";
 
 @Component({
   selector: 'venusta-create-customer',
   standalone: true,
-  imports: [CommonModule, CustomerFormComponent, MatCardModule],
+  imports: [CommonModule, CustomerFormComponent, MatCardModule, CardComponent],
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss'],
 })

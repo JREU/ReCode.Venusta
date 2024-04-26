@@ -12,11 +12,12 @@ import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 import { MatCardModule } from "@angular/material/card";
 import { filterNullAndUndefined } from "@recode/utilities";
+import { CardComponent } from "@venusta/shared/ui";
 
 @Component({
   selector: 'venusta-edit-customer',
   standalone: true,
-  imports: [CommonModule, CustomerFormComponent, MatCardModule],
+  imports: [CommonModule, CustomerFormComponent, MatCardModule, CardComponent],
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.scss'],
 })

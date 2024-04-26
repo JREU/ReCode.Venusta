@@ -1,40 +1,58 @@
 <div class="customers">
   <div class="customers__header">
-    <h1 class="customers__title">Klanten</h1>
-    <button mat-raised-button color="primary" type="button" (click)="onCreate()">Klant toevoegen</button>
+    <div class="flex flex-col gap-1">
+      <h1 class="customers__title text-xl font-bold dark:text-slate-300">
+        Klanten
+      </h1>
+      <p class="mt-1 text-slate-400">
+        Een lijst van alle klanten in het systeem met hun voor- en achternaam,
+        e-mail en telefoonnummer.
+      </p>
+    </div>
+
+    <button
+      venusta-button
+      type="button"
+      (click)="onCreate()">
+      Klant toevoegen
+    </button>
   </div>
-<mat-card>
-  <mat-card-content>
-    @if(customers$ | async; as customers) {
-      <table mat-table venusta-table [dataSource]="customers" class="mat-elevation-z0 customers__table">
-        <ng-container matColumnDef="firstName">
-          <th mat-header-cell *matHeaderCellDef>Voornaam</th>
-          <td mat-cell *matCellDef="let element">{{element.firstName}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="lastName">
-          <th mat-header-cell *matHeaderCellDef>Achternaam</th>
-          <td mat-cell *matCellDef="let element">{{element.lastName}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="email">
-          <th mat-header-cell *matHeaderCellDef>Email</th>
-          <td mat-cell *matCellDef="let element">{{element.email}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="phoneNumber">
-          <th mat-header-cell *matHeaderCellDef>Telefoonnummer</th>
-          <td mat-cell *matCellDef="let element">{{element.phoneNumber}}</td>
-        </ng-container>
-
-        <tr class="customers__table-row--header" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr class="customers__table-row--content" mat-row (click)="onSelect(row.id)" *matRowDef="let row; columns: displayedColumns;"></tr>
+  <div class="mt-6">
+    @if (customers$ | async; as customers) {
+      <table venusta-table>
+        <thead>
+          <tr>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+            <th>E-mail</th>
+            <th>Telefoonnummer</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (customer of customers; track customer.id) {
+            <tr>
+              <td class="font-semibold">
+                {{ customer.firstName }}
+              </td>
+              <td>
+                {{ customer.lastName }}
+              </td>
+              <td>
+                {{ customer.email }}
+              </td>
+              <td>
+                {{ customer.phoneNumber }}
+              </td>
+              <td class="text-right">
+                <a>Bewerken</a>
+              </td>
+            </tr>
+          }
+        </tbody>
       </table>
     } @else {
-      <span>
-      Geen klanten gevonden.
-    </span>
+      <span>Geen klanten gevonden.</span>
     }
-  </mat-card-content>
-</mat-card>
+  </div>
 </div>

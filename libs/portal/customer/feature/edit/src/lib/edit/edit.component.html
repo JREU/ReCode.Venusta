@@ -1,4 +1,4 @@
-<mat-card>
+<venusta-card>
   @if(customer$ | async; as customer) {
     <mat-card-header>
       <mat-card-title>{{ customer.firstName }} {{ customer.lastName }} bewerken</mat-card-title>
@@ -7,6 +7,6 @@
       <venusta-customer-form [customer]="customer" (submitted)="onSubmit($event, customer)" />
     </mat-card-content>
   }
-</mat-card>
+</venusta-card>
 
 

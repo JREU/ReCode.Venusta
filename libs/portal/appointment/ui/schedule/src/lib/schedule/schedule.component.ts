@@ -1,11 +1,13 @@
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FullCalendarModule } from "@fullcalendar/angular";
-import { Calendar, CalendarOptions, EventSourceInput } from "@fullcalendar/core";
+import { CalendarOptions, EventSourceInput } from "@fullcalendar/core";
 import nlLocale from "@fullcalendar/core/locales/nl";
 import interactionPlugin from "@fullcalendar/interaction";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import { SchedulerUtils } from "@venusta/portal/appointment/utils";
+import { TimeSlot } from "@venusta/portal/appointment/models";
 
 @Component({
   selector: 'venusta-schedule',
@@ -22,7 +24,7 @@ export class ScheduleComponent {
   eventSelected: EventEmitter<string> = new EventEmitter<string>();
 
   @Output()
-  slotSelected: EventEmitter<any> = new EventEmitter<any>();
+  slotSelected: EventEmitter<TimeSlot> = new EventEmitter<TimeSlot>();
 
   protected calendarOptions: CalendarOptions = {
     selectable: true,
@@ -49,8 +51,8 @@ export class ScheduleComponent {
         info.view.calendar.gotoDate(info.start);
         info.view.calendar.changeView('timeGridWeek');
       }
-
-      this.slotSelected.emit(info);
+      // Return the selected time slot
+      this.slotSelected.emit(SchedulerUtils.toTimeSlot(info));
     },
     eventClick: (event) => {
       this.eventSelected.emit(event.event.id);

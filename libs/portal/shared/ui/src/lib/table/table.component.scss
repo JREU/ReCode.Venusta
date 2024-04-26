@@ -1,0 +1,28 @@
+:host{
+  @apply w-full text-left table-auto;
+
+  ::ng-deep {
+    th {
+      @apply py-4 px-3 font-semibold;
+    }
+
+    td {
+      @apply border-t border-slate-100 py-4 px-3;
+    }
+
+    a {
+      @apply text-indigo-600 font-semibold;
+    }
+  }
+}
+.dark {
+  :host{
+    @apply text-slate-50;
+
+    ::ng-deep {
+      td {
+        @apply border-slate-800;
+      }
+    }
+  }
+}

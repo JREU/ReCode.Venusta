@@ -1,9 +1,12 @@
-﻿import { EnvironmentProviders, makeEnvironmentProviders } from "@angular/core";
-import { provideState } from "@ngrx/store";
-import { portalFeature } from "@venusta/portal/shared/data-access";
+﻿import { EnvironmentProviders, makeEnvironmentProviders } from '@angular/core';
+import { provideEffects } from '@ngrx/effects';
+import { provideState } from '@ngrx/store';
+import { PortalEffects } from './portal.effects';
+import { portalFeature } from './portal.feature';
 
 export function providePortalDataAccess(): EnvironmentProviders {
   return makeEnvironmentProviders([
-    provideState(portalFeature)
+    provideState(portalFeature),
+    provideEffects(PortalEffects),
   ]);
 }

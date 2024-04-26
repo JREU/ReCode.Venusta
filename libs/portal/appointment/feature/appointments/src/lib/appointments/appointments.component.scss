@@ -1,4 +1,4 @@
-@import "apps/portal/src/portal.theme";
+@use 'apps/portal/src/variables';
 
 :host ::ng-deep {
   .fc-button {
@@ -7,21 +7,22 @@
 
   .fc-button-primary,
   .fc th{
-    background-color: map-get($my-primary, 900);
-    border-color: map-get($my-primary, 100);
-    color: map-get($my-primary, 100);
+    background-color: variables.$background-color-button-primary;
+    border-color: variables.$border-color-primary;
+    color: variables.$font-color-button-primary;
   }
 
-  .fc-button-active {
-    background-color: map-get($my-primary, 100) !important;
+  .fc-button-active,
+  .fc-v-event{
+    background-color: variables.$background-color-button-primary !important;
   }
 
   .fc-daygrid-day.fc-day-today,
   .fc-timegrid-col.fc-day-today {
-    background-color: map-get($my-primary, 100) !important;
+    background-color: variables.$background-color-quaternary !important;
   }
 
   .fc-daygrid-event-dot{
-    border-color: map-get($my-primary, 900) !important;
+    border-color: variables.$font-color-button-secondary !important;
   }
 }

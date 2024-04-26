@@ -1,5 +1,5 @@
-﻿import { Appointment } from "@venusta/portal/appointment/models";
-import { EventInput, EventSourceInput } from "@fullcalendar/core";
+﻿import { Appointment, TimeSlot } from "@venusta/portal/appointment/models";
+import { DateSelectArg, EventInput, EventSourceInput } from "@fullcalendar/core";
 
 export class SchedulerUtils {
   static toEventSourceInput(appointments: Appointment[]): EventSourceInput {
@@ -10,4 +10,14 @@ export class SchedulerUtils {
       end: appointment.endAt
     }) as EventInput);
   }
+
+  static toTimeSlot(dateSelectArg: DateSelectArg): TimeSlot {
+    return {
+      start: dateSelectArg.start,
+      end: dateSelectArg.end,
+      allDay: dateSelectArg.allDay
+    }
+  }
 }
+
+

@@ -1,6 +1,46 @@
-<form class="search" [formGroup]="searchForm" (keyup.enter)="onSubmit()">
-  <mat-form-field subscriptSizing="dynamic">
-    <input type="text" formControlName="search" matInput placeholder="Zoeken">
-    <mat-icon matSuffix color="primary">search</mat-icon>
-  </mat-form-field>
+<form
+  class="search w-full"
+  [formGroup]="searchForm"
+  (keyup.enter)="onSubmit()">
+  <div class="relative w-full">
+    <div class="absolute inset-y-0 left-2 flex items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6 stroke-gray-400 dark:stroke-slate-600">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+      </svg>
+    </div>
+    <input
+      id="search"
+      name="email"
+      type="text"
+      required
+      formControlName="search"
+      placeholder="Zoeken..."
+      class="block w-full rounded-md border-0 bg-transparent py-3 pl-10 pr-2 text-gray-400 outline-0 placeholder:text-gray-400 sm:text-sm sm:leading-6 dark:text-slate-600 dark:placeholder:text-slate-600" />
+    @if (searchForm.controls.search.dirty) {
+      <div class="absolute inset-y-0 right-2 flex items-center">
+        <button type="reset">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            class="h-6 w-6 stroke-gray-400 dark:stroke-slate-600">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    }
+  </div>
 </form>

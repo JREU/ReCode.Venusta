@@ -1,9 +1,7 @@
-<div class="appointments">
-
-
+<venusta-card class="appointments">
   @if(events$ | async; as events){
     <venusta-schedule [events]="events"
                       (eventSelected)="onEventSelect($event)"
                       (slotSelected)="onSlotSelect($event)"/>
   }
-</div>
+</venusta-card>

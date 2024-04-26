@@ -6,6 +6,12 @@
   "tags": ["scope:portal", "domain:shared", "type:directives"],
   "projectType": "library",
   "targets": {
+    "serve": {
+      "styles": ["libs/portal/shared/directives/src/lib/button.directive.scss"]
+    },
+    "build": {
+      "styles": ["libs/portal/shared/directives/src/lib/button.directive.scss"]
+    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
