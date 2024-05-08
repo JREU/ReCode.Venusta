@@ -49,8 +49,8 @@ export class CustomersComponent implements OnInit {
     this.customers$ = this.store.select(customerFeature.selectCustomers);
   }
 
-  protected onSelect(row: any): void {
-    this.router.navigate([row.data.id], { relativeTo: this.activatedRoute });
+  protected onEdit(customerId: number): void {
+    this.router.navigate([customerId], { relativeTo: this.activatedRoute });
   }
 
   protected onCreate(): void {

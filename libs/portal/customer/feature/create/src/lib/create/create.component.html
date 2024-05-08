@@ -1,9 +1,10 @@
-<venusta-card>
-  <mat-card-header>
-    <mat-card-title>Nieuwe klant</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <venusta-customer-form (submitted)="onSubmit($event)" />
-  </mat-card-content>
-</venusta-card>
+<div>
+  <h2 class="text-base font-semibold leading-7 text-slate-400">Nieuwe klant</h2>
+  <p class="mt-1 text-sm leading-6 text-slate-600">
+    Voer hier de gegevens in van de klant.
+  </p>
 
+  <venusta-customer-form
+    (submitted)="onSubmit($event)"
+    (cancelled)="onCancel()" />
+</div>

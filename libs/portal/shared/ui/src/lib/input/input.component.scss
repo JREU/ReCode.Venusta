@@ -1,0 +1,7 @@
+:host{
+  @apply block w-full focus-visible:outline-0 rounded-md border-0 py-2.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-700 sm:text-sm sm:leading-6
+}
+
+.dark :host{
+  @apply text-slate-400 bg-slate-800 ring-slate-700  focus:ring-indigo-700
+}

@@ -45,7 +45,7 @@
                 {{ customer.phoneNumber }}
               </td>
               <td class="text-right">
-                <a>Bewerken</a>
+                <a (click)="onEdit(customer.id)">Bewerken</a>
               </td>
             </tr>
           }
