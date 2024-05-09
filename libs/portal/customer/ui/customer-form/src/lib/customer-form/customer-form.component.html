@@ -3,7 +3,7 @@
   class="customer-form"
   (ngSubmit)="onSubmit()">
   <div class="space-y-12">
-    <div class="border-b border-slate-800 pb-12">
+    <div class="border-b border-gray-200 pb-12 dark:border-slate-800">
       <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-3">
           <label
@@ -38,7 +38,7 @@
         </div>
         <div class="sm:col-span-2">
           <label
-            for="birth-date"
+            for="date-of-birth"
             class="block text-sm font-medium leading-6 text-slate-400">
             Geboortedatum
           </label>
@@ -46,11 +46,12 @@
             <input
               venusta-input
               type="date"
-              name="birth-date"
-              id="birth-date" />
+              name="date-of-birth"
+              id="date-of-birth"
+              formControlName="dateOfBirth" />
           </div>
         </div>
-        <div class="sm:col-span-3">
+        <div class="sm:col-span-4">
           <label
             for="email"
             class="block text-sm font-medium leading-6 text-slate-400">
@@ -96,4 +97,6 @@
       Opslaan
     </button>
   </div>
+
+  {{ customerForm.value | json }}
 </form>

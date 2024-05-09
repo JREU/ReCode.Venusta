@@ -6,26 +6,13 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatInputModule } from '@angular/material/input';
 import { Customer } from '@venusta/portal/customer/models';
 import { ButtonComponent, InputComponent } from '@venusta/shared/ui';
 
 @Component({
   selector: 'venusta-customer-form',
   standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    InputComponent,
-    ButtonComponent,
-  ],
+  imports: [CommonModule, ReactiveFormsModule, InputComponent, ButtonComponent],
   templateUrl: './customer-form.component.html',
   styleUrls: ['./customer-form.component.scss'],
 })

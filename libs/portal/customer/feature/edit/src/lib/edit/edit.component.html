@@ -1,12 +1,15 @@
-<venusta-card>
-  @if(customer$ | async; as customer) {
-    <mat-card-header>
-      <mat-card-title>{{ customer.firstName }} {{ customer.lastName }} bewerken</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <venusta-customer-form [customer]="customer" (submitted)="onSubmit($event, customer)" />
-    </mat-card-content>
-  }
-</venusta-card>
+@if (customer$ | async; as customer) {
+  <div>
+    <h2 class="text-base font-semibold leading-7 text-slate-400">
+      {{ customer.firstName }} {{ customer.lastName }} bewerken
+    </h2>
+    <p class="mt-1 text-sm leading-6 text-slate-600">
+      Pas hier de gegevens aan van een reeds bestaande klant.
+    </p>
 
-
+    <venusta-customer-form
+      [customer]="customer"
+      (submitted)="onSubmit($event, customer)"
+      (cancelled)="onCancel()" />
+  </div>
+}
