@@ -1,38 +1,59 @@
-﻿import { createReducer, on } from "@ngrx/store";
-import { AppointmentState } from "./appointment.state";
-import { appointmentApiActions } from "@venusta/portal/appointment/data-access";
+﻿import { createReducer, on } from '@ngrx/store';
+import { appointmentApiActions } from './actions';
+import { AppointmentState } from './appointment.state';
 
 const initialState: AppointmentState = {
   appointments: null,
-  appointment: null
-}
+  appointment: null,
+};
 
 export const appointmentReducer = createReducer<AppointmentState>(
   initialState,
-  on(appointmentApiActions.appointmentLoadedSuccess, (state, { appointment }) => ({
-    ...state,
-    appointment: appointment
-  })),
-  on(appointmentApiActions.appointmentLoadedFailure, (state) => ({
-    ...state,
-    appointment: null
-  })),
-  on(appointmentApiActions.appointmentsLoadedSuccess, (state, { appointments }) => ({
-    ...state,
-    appointment: null,
-    appointments: appointments
-  })),
-  on(appointmentApiActions.appointmentsLoadedFailure, (state) => ({
-    ...state,
-    appointments: null,
-    appointment: null
-  })),
-  on(appointmentApiActions.appointmentDeletedSuccess, (state, { appointmentId }) => ({
-    ...state,
-    appointments: state.appointments?.filter(appointment => appointment.id !== appointmentId) ?? null
-  })),
-  on(appointmentApiActions.appointmentUpdatedSuccess, (state, { updatedAppointment }) => ({
-    ...state,
-    appointment: updatedAppointment
-  }))
+  on(
+    appointmentApiActions.appointmentLoadedSuccess,
+    (state, { appointment }): AppointmentState => ({
+      ...state,
+      appointment: appointment,
+    }),
+  ),
+  on(
+    appointmentApiActions.appointmentLoadedFailure,
+    (state): AppointmentState => ({
+      ...state,
+      appointment: null,
+    }),
+  ),
+  on(
+    appointmentApiActions.appointmentsLoadedSuccess,
+    (state, { appointments }): AppointmentState => ({
+      ...state,
+      appointment: null,
+      appointments: appointments,
+    }),
+  ),
+  on(
+    appointmentApiActions.appointmentsLoadedFailure,
+    (state): AppointmentState => ({
+      ...state,
+      appointments: null,
+      appointment: null,
+    }),
+  ),
+  on(
+    appointmentApiActions.appointmentDeletedSuccess,
+    (state, { appointmentId }) => ({
+      ...state,
+      appointments:
+        state.appointments?.filter(
+          appointment => appointment.id !== appointmentId,
+        ) ?? null,
+    }),
+  ),
+  on(
+    appointmentApiActions.appointmentUpdatedSuccess,
+    (state, { updatedAppointment }): AppointmentState => ({
+      ...state,
+      appointment: updatedAppointment,
+    }),
+  ),
 );

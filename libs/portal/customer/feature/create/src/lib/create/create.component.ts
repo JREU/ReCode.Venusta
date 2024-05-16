@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { CustomerFormComponent } from '@venusta/customer/ui/customer-form';
@@ -14,7 +13,7 @@ import { CardComponent } from '@venusta/shared/ui';
 @Component({
   selector: 'venusta-create-customer',
   standalone: true,
-  imports: [CommonModule, CustomerFormComponent, MatCardModule, CardComponent],
+  imports: [CommonModule, CustomerFormComponent, CardComponent],
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss'],
 })

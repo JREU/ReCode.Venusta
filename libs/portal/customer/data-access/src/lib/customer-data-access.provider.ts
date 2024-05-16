@@ -1,16 +1,16 @@
-﻿import { EnvironmentProviders, makeEnvironmentProviders } from "@angular/core";
-import { provideHttpClient } from "@angular/common/http";
-import { provideState } from "@ngrx/store";
-import { provideEffects } from "@ngrx/effects";
-import { customerFeature } from "@venusta/portal/customer/data-access";
-import { CustomerEffects } from "./customer.effects";
-import { CustomerService } from "./customer.service";
+﻿import { provideHttpClient } from '@angular/common/http';
+import { EnvironmentProviders, makeEnvironmentProviders } from '@angular/core';
+import { provideEffects } from '@ngrx/effects';
+import { provideState } from '@ngrx/store';
+import { CustomerEffects } from './customer.effects';
+import { customerFeature } from './customer.feature';
+import { CustomerService } from './customer.service';
 
 export function provideCustomerDataAccess(): EnvironmentProviders {
   return makeEnvironmentProviders([
     CustomerService,
     provideHttpClient(),
     provideState(customerFeature),
-    provideEffects(CustomerEffects)
+    provideEffects(CustomerEffects),
   ]);
 }

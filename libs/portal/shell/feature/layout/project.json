@@ -1,24 +1,24 @@
 {
   "name": "portal-shell-layout",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/portal/shell/layout/src",
+  "sourceRoot": "libs/portal/shell/feature/layout/src",
   "prefix": "venusta",
-  "tags": ["scope:portal", "type:layout"],
+  "tags": ["scope:portal", "domain:shell", "type:shell"],
   "projectType": "library",
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/portal/shell/layout/jest.config.ts"
+        "jestConfig": "libs/portal/shell/feature/layout/jest.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
-          "libs/portal/shell/layout/**/*.ts",
-          "libs/portal/shell/layout/**/*.html"
+          "libs/portal/shell/feature/layout/**/*.ts",
+          "libs/portal/shell/feature/layout/**/*.html"
         ]
       }
     }

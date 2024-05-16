@@ -1,10 +1,7 @@
-﻿import { EnvironmentProviders, makeEnvironmentProviders } from "@angular/core";
-import { CustomerApi } from "@venusta/portal/customer/api";
-import { provideHttpClient } from "@angular/common/http";
+﻿import { provideHttpClient } from '@angular/common/http';
+import { EnvironmentProviders, makeEnvironmentProviders } from '@angular/core';
+import { CustomerApi } from './customer.api';
 
 export function provideCustomerApi(): EnvironmentProviders {
-  return makeEnvironmentProviders([
-    provideHttpClient(),
-    CustomerApi
-  ]);
+  return makeEnvironmentProviders([provideHttpClient(), CustomerApi]);
 }

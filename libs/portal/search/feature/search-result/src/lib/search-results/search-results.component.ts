@@ -1,22 +1,31 @@
-import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from "@ngrx/store";
-import { SearchState } from "@venusta/portal/search/data-access";
-import { searchFeature } from "../../../../../data-access/src/lib/search.feature";
-import { Observable } from "rxjs";
-import { SearchResults } from "@venusta/portal/shared/models";
-import { SearchResultComponent } from "@venusta/portal/search/ui/search-result";
-import { MatList, MatListSubheaderCssMatStyler, MatNavList } from "@angular/material/list";
+import { Component, inject, OnInit } from '@angular/core';
+import {
+  MatList,
+  MatListSubheaderCssMatStyler,
+  MatNavList,
+} from '@angular/material/list';
+import { Store } from '@ngrx/store';
+import { searchFeature } from '@venusta/portal/search/data-access';
+import { SearchResultComponent } from '@venusta/portal/search/ui/search-result';
+import { SearchResults } from '@venusta/portal/shared/models';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'venusta-search-results',
   standalone: true,
-  imports: [CommonModule, SearchResultComponent, MatList, MatListSubheaderCssMatStyler, MatNavList],
+  imports: [
+    CommonModule,
+    SearchResultComponent,
+    MatList,
+    MatListSubheaderCssMatStyler,
+    MatNavList,
+  ],
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss'],
 })
 export class SearchResultsComponent implements OnInit {
-  private readonly store = inject(Store<SearchState>);
+  private readonly store = inject(Store);
 
   results$!: Observable<SearchResults | null>;
 

@@ -5,7 +5,6 @@ import { SearchComponent } from '@venusta/portal/search';
 import {
   portalFeature,
   portalPageActions,
-  PortalState,
 } from '@venusta/portal/shared/data-access';
 import { CardComponent } from '@venusta/shared/ui';
 import { Observable } from 'rxjs';
@@ -18,7 +17,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  private readonly store = inject(Store<PortalState>);
+  private readonly store = inject(Store);
 
   protected darkMode$!: Observable<boolean>;
   protected profileMenuExpanded$!: Observable<boolean>;

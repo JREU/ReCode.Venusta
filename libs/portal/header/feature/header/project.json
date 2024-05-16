@@ -1,21 +1,20 @@
 {
-  "name": "portal-header-ui-header",
+  "name": "header",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/portal/header/ui/header/src",
+  "sourceRoot": "libs/portal/header/feature/header/src",
   "prefix": "venusta",
-  "tags": ["scope:portal", "domain:header", "type:ui"],
   "projectType": "library",
+  "tags": ["scope:portal", "domain:header", "type:feature"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/portal/header/ui/header/jest.config.ts"
+        "jestConfig": "libs/portal/header/feature/header/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "executor": "@nx/eslint:lint"
     }
   }
 }

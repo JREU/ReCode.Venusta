@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SearchResultsComponent } from "@venusta/portal/search/search-result";
-
+import { SearchResultsComponent } from './search-results.component';
 
 describe('SearchResultsComponent', () => {
   let component: SearchResultsComponent;

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: '[venusta-button]',
   standalone: true,
   imports: [CommonModule],

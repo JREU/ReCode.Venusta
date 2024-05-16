@@ -70,7 +70,8 @@
                   "type:data-access",
                   "type:ui",
                   "type:utils",
-                  "type:models"
+                  "type:models",
+                  "type:directives"
                 ]
               },
               {
@@ -88,7 +89,8 @@
                 "onlyDependOnLibsWithTags": [
                   "type:ui",
                   "type:models",
-                  "type:utils"
+                  "type:utils",
+                  "type:directives"
                 ]
               },
               {

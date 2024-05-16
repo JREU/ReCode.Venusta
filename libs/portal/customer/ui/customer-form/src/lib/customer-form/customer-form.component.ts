@@ -1,24 +1,30 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit, output } from '@angular/core';
+import { Component, input, OnInit, output } from '@angular/core';
 import {
   FormControl,
   FormGroup,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { DateDirective } from '@venusta/directives';
 import { Customer } from '@venusta/portal/customer/models';
 import { ButtonComponent, InputComponent } from '@venusta/shared/ui';
 
 @Component({
   selector: 'venusta-customer-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, InputComponent, ButtonComponent],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    InputComponent,
+    ButtonComponent,
+    DateDirective,
+  ],
   templateUrl: './customer-form.component.html',
   styleUrls: ['./customer-form.component.scss'],
 })
 export class CustomerFormComponent implements OnInit {
-  @Input()
-  customer!: Customer;
+  customer = input<Customer | null>(null);
 
   submitted = output<Customer>();
   cancelled = output<void>();
@@ -51,7 +57,7 @@ export class CustomerFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerForm.patchValue({
-      ...this.customer,
+      ...this.customer(),
     });
   }
 }

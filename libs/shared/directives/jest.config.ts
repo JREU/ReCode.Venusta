@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'portal-header-ui-header',
-  preset: '../../../../../jest.preset.js',
+  displayName: 'directives',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../../../coverage/libs/portal/header/ui/header',
+  coverageDirectory: '../../../coverage/libs/shared/directives',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

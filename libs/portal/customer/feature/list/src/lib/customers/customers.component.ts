@@ -1,8 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { CustomerFormComponent } from '@venusta/customer/ui/customer-form';
@@ -24,10 +21,7 @@ import { Observable } from 'rxjs';
   standalone: true,
   imports: [
     CommonModule,
-    MatTableModule,
-    MatButtonModule,
     CustomerFormComponent,
-    MatCardModule,
     ButtonComponent,
     CardComponent,
     TableComponent,

@@ -1,6 +1,6 @@
-﻿import {createActionGroup, emptyProps, props} from "@ngrx/store";
-import { HttpErrorResponse } from "@angular/common/http";
-import { Customer } from "@venusta/portal/customer/models";
+﻿import { HttpErrorResponse } from '@angular/common/http';
+import { createActionGroup, props } from '@ngrx/store';
+import { Customer } from '@venusta/portal/customer/models';
 
 export const customerApiActions = createActionGroup({
   source: 'Customer API',
@@ -17,5 +17,5 @@ export const customerApiActions = createActionGroup({
     customerUpdatedFailure: props<{ error: HttpErrorResponse }>(),
     customersSearchSuccess: props<{ customers: Customer[] }>(),
     customersSearchFailure: props<{ error: HttpErrorResponse }>(),
-  }
+  },
 });
