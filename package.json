@@ -81,5 +81,11 @@
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "5.4.5"
+  },
+  "optionalDependencies": {
+    "@nx/nx-darwin-arm64": "18.3.4",
+    "@nx/nx-darwin-x64": "18.3.4",
+    "@nx/nx-linux-x64-gnu": "18.3.4",
+    "@nx/nx-win32-x64-msvc": "18.3.4"
   }
 }
