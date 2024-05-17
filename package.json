@@ -5,6 +5,10 @@
   "scripts": {
     "prepare": "husky"
   },
+  "lint-staged": {
+    "**/*.{scss,html,json,md,js,ts,yml}": "prettier --write --ignore-unknown",
+    "**/*.{html,js,ts}": "eslint --fix"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "17.3.6",
@@ -27,7 +31,7 @@
     "@ngrx/store": "17.0.1",
     "@ngrx/store-devtools": "17.0.1",
     "@nx/angular": "18.3.4",
-    "@recode/utilities": "^17.0.0-alpha.4",
+    "@versure/utilities": "^17.0.0-rc.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "0.14.4"
