@@ -1,7 +1,7 @@
 ﻿import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { filterNullAndUndefined } from '@recode/utilities';
 import { Appointment } from '@venusta/portal/appointment/models';
+import { filterNullAndUndefined } from '@versure/utilities';
 import { map, Observable, of, throwError } from 'rxjs';
 
 @Injectable()

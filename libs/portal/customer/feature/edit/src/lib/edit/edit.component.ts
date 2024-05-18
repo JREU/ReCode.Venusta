@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { filterNullAndUndefined } from '@recode/utilities';
 import { CustomerFormComponent } from '@venusta/customer/ui/customer-form';
 import {
   customerFeature,
@@ -10,6 +9,7 @@ import {
   CustomerState,
 } from '@venusta/portal/customer/data-access';
 import { Customer } from '@venusta/portal/customer/models';
+import { filterNullAndUndefined } from '@versure/utilities';
 import { Observable } from 'rxjs';
 
 @Component({

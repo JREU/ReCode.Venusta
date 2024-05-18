@@ -19,7 +19,9 @@
   </div>
   <div class="mt-6">
     @if (customers$ | async; as customers) {
-      <table venusta-table>
+      <table
+        data-testid="customers-table"
+        venusta-table>
         <thead>
           <tr>
             <th>Voornaam</th>

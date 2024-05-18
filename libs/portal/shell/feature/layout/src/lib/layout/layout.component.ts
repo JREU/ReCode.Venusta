@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '@venusta/portal/header/ui/header';
+import { HeaderComponent } from '@venusta/portal/header';
 import { SidebarComponent } from '@venusta/portal/sidebar';
 
 @Component({

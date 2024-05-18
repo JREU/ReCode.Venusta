@@ -1,11 +1,11 @@
 ﻿import { inject, Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { filterNullAndUndefined } from '@recode/utilities';
 import {
   customerFeature,
   customerPageActions,
 } from '@venusta/portal/customer/data-access';
 import { SearchResult, SearchResultType } from '@venusta/portal/shared/models';
+import { filterNullAndUndefined } from '@versure/utilities';
 import { map, Observable } from 'rxjs';
 
 @Injectable()
