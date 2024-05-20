@@ -1,8 +1,12 @@
-﻿import { SearchResultType } from "./search-result-type.model";
+﻿import { TemplateRef } from '@angular/core';
+import { SearchResultType } from './search-result-type.model';
 
 export type SearchResult = {
   title: string;
-  description: string;
+  pictureUrl: string;
+  subtitle?: string;
+  description?: string;
+  data: TemplateRef<unknown>;
   url: string;
-  type: SearchResultType
-}
+  type: SearchResultType;
+};

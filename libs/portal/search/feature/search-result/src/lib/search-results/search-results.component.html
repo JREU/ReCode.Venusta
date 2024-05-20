@@ -1,12 +1,22 @@
 <div class="search-results">
-@if(results$ | async; as response) {
-  <mat-nav-list>
-    <div mat-subheader>Zoekresultaten</div>
-    @for(result of response.results; track result.url){
-      <venusta-search-result [searchResult]="result" />
-    }
-  </mat-nav-list>
-}@else{
-  <p>Geen resultaten gevonden</p>
-}
+  @if (results$ | async; as response) {
+    <h2 class="text-base font-semibold leading-7 text-slate-300">
+      Zoekresultaten
+    </h2>
+    <p
+      class="mt-1 border-b border-b-slate-800 pb-4 text-sm leading-6 text-slate-400">
+      Resultaten voor uw zoekopdracht.
+    </p>
+    <ul
+      role="list"
+      class="divide-y divide-slate-800">
+      @for (result of response.results; track result.url) {
+        <li class="flex gap-x-6 py-5">
+          <venusta-search-result [searchResult]="result" />
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="text-slate-400">Geen resultaten gevonden</p>
+  }
 </div>

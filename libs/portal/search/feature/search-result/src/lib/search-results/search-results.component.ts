@@ -1,10 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import {
-  MatList,
-  MatListSubheaderCssMatStyler,
-  MatNavList,
-} from '@angular/material/list';
+import { RouterLink } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { searchFeature } from '@venusta/portal/search/data-access';
 import { SearchResultComponent } from '@venusta/portal/search/ui/search-result';
@@ -14,13 +10,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'venusta-search-results',
   standalone: true,
-  imports: [
-    CommonModule,
-    SearchResultComponent,
-    MatList,
-    MatListSubheaderCssMatStyler,
-    MatNavList,
-  ],
+  imports: [CommonModule, SearchResultComponent, RouterLink],
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss'],
 })
