@@ -1,0 +1,23 @@
+{
+  "name": "sidebar",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sidebar/feature/sidebar/src",
+  "prefix": "venusta",
+  "tags": ["scope:portal", "domain:sidebar", "type:feature"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/portal/sidebar/feature/sidebar/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/portal/sidebar/feature/sidebar/**/*.ts", "libs/portal/sidebar/feature/sidebar/**/*.html"]
+      }
+    }
+  }
+}

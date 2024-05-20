@@ -1,0 +1,60 @@
+<div class="customers">
+  <div class="customers__header">
+    <div class="flex flex-col gap-1">
+      <h1 class="customers__title text-xl font-bold dark:text-slate-300">
+        Klanten
+      </h1>
+      <p class="mt-1 text-slate-400">
+        Een lijst van alle klanten in het systeem met hun voor- en achternaam,
+        e-mail en telefoonnummer.
+      </p>
+    </div>
+
+    <button
+      venusta-button
+      type="button"
+      (click)="onCreate()">
+      Klant toevoegen
+    </button>
+  </div>
+  <div class="mt-6">
+    @if (customers$ | async; as customers) {
+      <table
+        data-testid="customers-table"
+        venusta-table>
+        <thead>
+          <tr>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+            <th>E-mail</th>
+            <th>Telefoonnummer</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (customer of customers; track customer.id) {
+            <tr>
+              <td class="font-semibold">
+                {{ customer.firstName }}
+              </td>
+              <td>
+                {{ customer.lastName }}
+              </td>
+              <td>
+                {{ customer.email }}
+              </td>
+              <td>
+                {{ customer.phoneNumber }}
+              </td>
+              <td class="text-right">
+                <a (click)="onEdit(customer.id)">Bewerken</a>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <span>Geen klanten gevonden.</span>
+    }
+  </div>
+</div>

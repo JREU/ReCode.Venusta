@@ -11,12 +11,17 @@
         "config": "apps/portal-e2e/playwright.config.ts"
       }
     },
+    "e2e:ui": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/apps/portal-e2e"],
+      "options": {
+        "config": "apps/portal-e2e/playwright.config.ts",
+        "ui": true
+      }
+    },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/portal-e2e/**/*.{js,ts}"]
-      }
+      "outputs": ["{options.outputFile}"]
     }
   },
   "implicitDependencies": ["portal"]

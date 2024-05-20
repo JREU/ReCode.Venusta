@@ -1,0 +1,100 @@
+<form
+  [formGroup]="customerForm"
+  class="customer-form"
+  (ngSubmit)="onSubmit()">
+  <div class="space-y-12">
+    <div class="border-b border-gray-200 pb-12 dark:border-slate-800">
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="sm:col-span-3">
+          <label
+            for="first-name"
+            class="block text-sm font-medium leading-6 text-slate-400">
+            Voornaam
+          </label>
+          <div class="mt-2">
+            <input
+              venusta-input
+              formControlName="firstName"
+              type="text"
+              name="first-name"
+              id="first-name" />
+          </div>
+        </div>
+
+        <div class="sm:col-span-3">
+          <label
+            for="last-name"
+            class="block text-sm font-medium leading-6 text-slate-400">
+            Achternaam
+          </label>
+          <div class="mt-2">
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              formControlName="lastName"
+              venusta-input />
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="date-of-birth"
+            class="block text-sm font-medium leading-6 text-slate-400">
+            Geboortedatum
+          </label>
+          <div class="mt-2">
+            <input
+              venusta-input
+              type="date"
+              name="date-of-birth"
+              id="date-of-birth"
+              formControlName="dateOfBirth" />
+          </div>
+        </div>
+        <div class="sm:col-span-4">
+          <label
+            for="email"
+            class="block text-sm font-medium leading-6 text-slate-400">
+            Telefoonnummer
+          </label>
+          <div class="mt-2">
+            <input
+              id="phone-number"
+              name="phone-number"
+              type="text"
+              formControlName="phoneNumber"
+              venusta-input />
+          </div>
+        </div>
+        <div class="sm:col-span-full">
+          <label
+            for="email"
+            class="block text-sm font-medium leading-6 text-slate-400">
+            Email
+          </label>
+          <div class="mt-2">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              formControlName="email"
+              venusta-input />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 flex items-center justify-end gap-x-6">
+    <button
+      type="button"
+      class="text-sm font-semibold leading-6 text-slate-400"
+      (click)="onCancel()">
+      Annuleren
+    </button>
+    <button
+      venusta-button
+      type="submit">
+      Opslaan
+    </button>
+  </div>
+</form>

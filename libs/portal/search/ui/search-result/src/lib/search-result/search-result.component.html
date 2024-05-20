@@ -1,0 +1,47 @@
+<div class="flex min-w-0 flex-1 gap-x-4">
+  @if (searchResult().pictureUrl) {
+    <img
+      class="h-12 w-12 flex-none rounded-full bg-gray-50"
+      [ngSrc]="searchResult().pictureUrl"
+      width="256"
+      height="256"
+      alt="" />
+  }
+
+  <div class="min-w-0 flex-auto">
+    <p class="text-sm font-semibold leading-6 text-slate-300">
+      {{ searchResult().title }}
+    </p>
+    @if (searchResult().description) {
+      <p class="mt-1 truncate text-xs leading-5 text-slate-400">
+        {{ searchResult().description }}
+      </p>
+    }
+  </div>
+</div>
+<div class="hidden shrink-0 justify-center sm:flex sm:flex-col sm:items-end">
+  @if (searchResult().subtitle) {
+    <p class="text-sm leading-6 text-slate-300">
+      {{ searchResult().subtitle }}
+    </p>
+  }
+  @if (searchResult().data) {
+    <p class="mt-1 text-xs leading-5 text-slate-400">
+      {{ searchResult().data }}
+    </p>
+  }
+</div>
+<a
+  href
+  class="flex flex-col justify-center"
+  [routerLink]="searchResult().url">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    class="h-6 w-6 fill-slate-400">
+    <path
+      fill-rule="evenodd"
+      d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+      clip-rule="evenodd" />
+  </svg>
+</a>

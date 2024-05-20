@@ -1,0 +1,20 @@
+﻿@use 'theme';
+
+$font-color-primary: theme.$primary;
+$font-color-secondary: theme.$tertiary;
+$font-color-tertiary: theme.$secondary;
+
+$font-color-button-primary: theme.$senary;
+$font-color-button-secondary: theme.$tertiary;
+
+$border-color-primary: #E5E2F0;
+
+$background-color-primary: theme.$quinary;
+$background-color-secondary: theme.$tertiary;
+$background-color-tertiary: theme.$secondary;
+$background-color-quaternary: theme.$senary;
+
+$background-color-button-primary: theme.$tertiary;
+$background-color-button-secondary: theme.$quaternary;
+
+$border-radius-primary: .5rem;

@@ -1,0 +1,10 @@
+<div
+  class="portal flex h-screen bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-600">
+  <venusta-sidebar></venusta-sidebar>
+  <main class="portal__main flex flex-1 flex-col overflow-y-auto">
+    <venusta-header></venusta-header>
+    <section class="portal__content p-6">
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>

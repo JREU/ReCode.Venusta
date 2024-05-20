@@ -1,0 +1,28 @@
+@use 'apps/portal/src/variables';
+
+:host ::ng-deep {
+  .fc-button {
+    transition: all .3s linear;
+  }
+
+  .fc-button-primary,
+  .fc th{
+    background-color: variables.$background-color-button-primary;
+    border-color: variables.$border-color-primary;
+    color: variables.$font-color-button-primary;
+  }
+
+  .fc-button-active,
+  .fc-v-event{
+    background-color: variables.$background-color-button-primary !important;
+  }
+
+  .fc-daygrid-day.fc-day-today,
+  .fc-timegrid-col.fc-day-today {
+    background-color: variables.$background-color-quaternary !important;
+  }
+
+  .fc-daygrid-event-dot{
+    border-color: variables.$font-color-button-secondary !important;
+  }
+}

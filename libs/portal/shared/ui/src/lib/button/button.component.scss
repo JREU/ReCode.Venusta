@@ -1,0 +1,7 @@
+:host{
+  @apply flex flex-row rounded-md bg-indigo-600 px-4 py-3 text-white stroke-white items-center gap-1 font-semibold fill-white transition-colors duration-200 ease-in-out;
+
+  &:hover {
+    @apply bg-indigo-500;
+  }
+}

@@ -14,7 +14,97 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@venusta/customer/ui/customer-form": [
+        "libs/portal/customer/ui/customer-form/src/index.ts"
+      ],
+      "@venusta/directives": ["libs/shared/directives/src/index.ts"],
+      "@venusta/portal/appointment/appointments": [
+        "libs/portal/appointment/feature/appointments/src/index.ts"
+      ],
+      "@venusta/portal/appointment/create": [
+        "libs/portal/appointment/feature/create/src/index.ts"
+      ],
+      "@venusta/portal/appointment/data-access": [
+        "libs/portal/appointment/data-access/src/index.ts"
+      ],
+      "@venusta/portal/appointment/models": [
+        "libs/portal/appointment/models/src/index.ts"
+      ],
+      "@venusta/portal/appointment/shell": [
+        "libs/portal/appointment/shell/src/index.ts"
+      ],
+      "@venusta/portal/appointment/ui/schedule": [
+        "libs/portal/appointment/ui/schedule/src/index.ts"
+      ],
+      "@venusta/portal/appointment/utils": [
+        "libs/portal/appointment/utils/src/index.ts"
+      ],
+      "@venusta/portal/customer/api": ["libs/portal/customer/api/src/index.ts"],
+      "@venusta/portal/customer/create": [
+        "libs/portal/customer/feature/create/src/index.ts"
+      ],
+      "@venusta/portal/customer/data-access": [
+        "libs/portal/customer/data-access/src/index.ts"
+      ],
+      "@venusta/portal/customer/edit": [
+        "libs/portal/customer/feature/edit/src/index.ts"
+      ],
+      "@venusta/portal/customer/list": [
+        "libs/portal/customer/feature/list/src/index.ts"
+      ],
+      "@venusta/portal/customer/models": [
+        "libs/portal/customer/models/src/index.ts"
+      ],
+      "@venusta/portal/customer/shell": [
+        "libs/portal/customer/shell/src/index.ts"
+      ],
+      "@venusta/portal/header": [
+        "libs/portal/header/feature/header/src/index.ts"
+      ],
+      "@venusta/portal/search": [
+        "libs/portal/search/feature/search/src/index.ts"
+      ],
+      "@venusta/portal/search/api": ["libs/portal/search/api/src/index.ts"],
+      "@venusta/portal/search/data-access": [
+        "libs/portal/search/data-access/src/index.ts"
+      ],
+      "@venusta/portal/search/models": [
+        "libs/portal/search/models/src/index.ts"
+      ],
+      "@venusta/portal/search/search-result": [
+        "libs/portal/search/feature/search-result/src/index.ts"
+      ],
+      "@venusta/portal/search/shell": ["libs/portal/search/shell/src/index.ts"],
+      "@venusta/portal/search/ui/search-result": [
+        "libs/portal/search/ui/search-result/src/index.ts"
+      ],
+      "@venusta/portal/shared/api": ["libs/portal/shared/api/src/index.ts"],
+      "@venusta/portal/shared/data-access": [
+        "libs/portal/shared/data-access/src/index.ts"
+      ],
+      "@venusta/portal/shared/directives": [
+        "libs/portal/shared/directives/src/index.ts"
+      ],
+      "@venusta/portal/shared/models": [
+        "libs/portal/shared/models/src/index.ts"
+      ],
+      "@venusta/portal/shared/utils": ["libs/portal/shared/utils/src/index.ts"],
+      "@venusta/portal/shell": [
+        "libs/portal/shell/feature/routes/src/index.ts"
+      ],
+      "@venusta/portal/shell/layout": [
+        "libs/portal/shell/feature/layout/src/index.ts"
+      ],
+      "@venusta/portal/sidebar": [
+        "libs/portal/sidebar/feature/sidebar/src/index.ts"
+      ],
+      "@venusta/shared/ui": ["libs/portal/shared/ui/src/index.ts"],
+      "@venusta/shared/utils": ["libs/shared/utils/src/index.ts"],
+      "@venusta/shared/directives": [
+        "libs/portal/shared/directives/src/index.ts"
+      ],
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

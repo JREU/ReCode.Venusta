@@ -1,0 +1,28 @@
+﻿@use "theme";
+
+@property --gradient-color-primary {
+  syntax: '<color>';
+  initial-value: theme.$secondary;
+  inherits: false;
+}
+
+@property --gradient-color-secondary {
+  syntax: '<color>';
+  initial-value: theme.$tertiary;
+  inherits: false;
+}
+
+@property --gradient-color-tertiary {
+  syntax: '<color>';
+  initial-value: theme.$quaternary;
+  inherits: false;
+}
+
+@mixin gradient-primary() {
+  background: linear-gradient(to right, var(--gradient-color-primary), var(--gradient-color-secondary), var(--gradient-color-tertiary));
+  transition: --gradient-color-primary .3s, --gradient-color--secondary .3s, --gradient-color-tertiary .3s;
+
+  &:hover{
+    background: theme.$secondary;
+  }
+}
