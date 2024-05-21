@@ -1,5 +1,5 @@
-﻿import { createActionGroup, emptyProps, props } from "@ngrx/store";
-import { Customer } from "@venusta/portal/customer/models";
+﻿import { createActionGroup, emptyProps, props } from '@ngrx/store';
+import { Customer, CustomerFilter } from '@venusta/portal/customer/models';
 
 export const customerPageActions = createActionGroup({
   source: 'Customer Page',
@@ -7,8 +7,9 @@ export const customerPageActions = createActionGroup({
     loadCustomers: emptyProps,
     loadCustomer: props<{ customerId: number }>(),
     deleteCustomer: props<{ customerId: number }>(),
-    createCustomer: props<{ customer: Omit<Customer, "id"> }>(),
+    createCustomer: props<{ customer: Omit<Customer, 'id'> }>(),
     updateCustomer: props<{ customer: Customer }>(),
-    searchCustomer: props<{ query: string }>()
-  }
+    searchCustomer: props<{ query: string }>(),
+    updateCustomerFilter: props<{ filter: CustomerFilter }>(),
+  },
 });

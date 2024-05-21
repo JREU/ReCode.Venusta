@@ -4,7 +4,7 @@
       <h1 class="customers__title text-xl font-bold dark:text-slate-300">
         Klanten
       </h1>
-      <p class="mt-1 text-slate-400">
+      <p class="mt-1 text-slate-600">
         Een lijst van alle klanten in het systeem met hun voor- en achternaam,
         e-mail en telefoonnummer.
       </p>
@@ -17,6 +17,9 @@
       Klant toevoegen
     </button>
   </div>
+  <venusta-customer-filter
+    class="flex max-w-xs"
+    (filterChange)="onFilterChange($event)" />
   <div class="mt-6">
     @if (customers$ | async; as customers) {
       <table

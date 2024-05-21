@@ -2,16 +2,17 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { CustomerFilterComponent } from '@venusta/customer/ui/customer-filter';
 import { CustomerFormComponent } from '@venusta/customer/ui/customer-form';
 import {
   customerFeature,
   customerPageActions,
-  CustomerState,
 } from '@venusta/portal/customer/data-access';
-import { Customer } from '@venusta/portal/customer/models';
+import { Customer, CustomerFilter } from '@venusta/portal/customer/models';
 import {
   ButtonComponent,
   CardComponent,
+  InputComponent,
   TableComponent,
 } from '@venusta/shared/ui';
 import { Observable } from 'rxjs';
@@ -25,12 +26,14 @@ import { Observable } from 'rxjs';
     ButtonComponent,
     CardComponent,
     TableComponent,
+    InputComponent,
+    CustomerFilterComponent,
   ],
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.scss'],
 })
 export class CustomersComponent implements OnInit {
-  private readonly store = inject(Store<CustomerState>);
+  private readonly store = inject(Store);
   private readonly router = inject(Router);
   private readonly activatedRoute = inject(ActivatedRoute);
 
@@ -49,5 +52,9 @@ export class CustomersComponent implements OnInit {
 
   protected onCreate(): void {
     this.router.navigate(['nieuw'], { relativeTo: this.activatedRoute });
+  }
+
+  protected onFilterChange(filter: CustomerFilter): void {
+    this.store.dispatch(customerPageActions.updateCustomerFilter({ filter }));
   }
 }

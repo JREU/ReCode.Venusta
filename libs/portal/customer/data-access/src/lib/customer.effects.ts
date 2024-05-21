@@ -1,9 +1,11 @@
 ﻿import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { Actions, concatLatestFrom, createEffect, ofType } from '@ngrx/effects';
+import { Store } from '@ngrx/store';
 import { RouterUtil } from '@venusta/portal/shared/utils';
 import { catchError, exhaustMap, map, mergeMap, of } from 'rxjs';
 import { customerApiActions, customerPageActions } from './actions';
+import { customerFeature } from './customer.feature';
 import { CustomerService } from './customer.service';
 
 @Injectable()
@@ -11,12 +13,17 @@ export class CustomerEffects {
   private readonly actions$ = inject(Actions);
   private readonly router = inject(Router);
   private readonly customerService = inject(CustomerService);
+  private readonly store = inject(Store);
 
   loadCustomers$ = createEffect(() => {
     return this.actions$.pipe(
-      ofType(customerPageActions.loadCustomers),
-      mergeMap(() =>
-        this.customerService.getAll().pipe(
+      ofType(
+        customerPageActions.loadCustomers,
+        customerPageActions.updateCustomerFilter,
+      ),
+      concatLatestFrom(() => this.store.select(customerFeature.selectFilter)),
+      mergeMap(([, filter]) =>
+        this.customerService.getAll(filter?.query).pipe(
           map(customers =>
             customerApiActions.customersLoadedSuccess({ customers }),
           ),

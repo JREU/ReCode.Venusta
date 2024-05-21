@@ -1,5 +1,5 @@
 ﻿import { createReducer, on } from '@ngrx/store';
-import { customerApiActions } from './actions/customer-api.actions';
+import { customerApiActions, customerPageActions } from './actions';
 import { CustomerState } from './customer.state';
 
 const initialState: CustomerState = {
@@ -7,6 +7,7 @@ const initialState: CustomerState = {
   customer: null,
   searchQuery: null,
   searchResult: null,
+  filter: null,
 };
 
 export const customerReducer = createReducer<CustomerState>(
@@ -65,6 +66,13 @@ export const customerReducer = createReducer<CustomerState>(
     (state): CustomerState => ({
       ...state,
       searchResult: null,
+    }),
+  ),
+  on(
+    customerPageActions.updateCustomerFilter,
+    (state, { filter }): CustomerState => ({
+      ...state,
+      filter,
     }),
   ),
 );
