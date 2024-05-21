@@ -8,7 +8,11 @@ import {
 } from '@angular/forms';
 import { DateDirective } from '@venusta/directives';
 import { Customer } from '@venusta/portal/customer/models';
-import { ButtonComponent, InputComponent } from '@venusta/shared/ui';
+import {
+  ButtonComponent,
+  InputComponent,
+  LabelComponent,
+} from '@venusta/shared/ui';
 
 @Component({
   selector: 'venusta-customer-form',
@@ -19,6 +23,7 @@ import { ButtonComponent, InputComponent } from '@venusta/shared/ui';
     InputComponent,
     ButtonComponent,
     DateDirective,
+    LabelComponent,
   ],
   templateUrl: './customer-form.component.html',
   styleUrls: ['./customer-form.component.scss'],

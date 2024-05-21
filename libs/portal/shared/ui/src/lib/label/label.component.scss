@@ -1,0 +1,9 @@
+:host {
+  @apply block text-sm font-medium leading-6 text-slate-800;
+  color-scheme: light;
+}
+
+.dark :host {
+  @apply text-slate-300;
+  color-scheme: dark;
+}

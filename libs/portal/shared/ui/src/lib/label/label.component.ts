@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: '[venusta-button]',
+  selector: '[venusta-label]',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './button.component.html',
-  styleUrl: './button.component.scss',
+  templateUrl: './label.component.html',
+  styleUrl: './label.component.scss',
 })
-export class ButtonComponent {}
+export class LabelComponent {}
