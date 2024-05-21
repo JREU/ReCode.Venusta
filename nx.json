@@ -66,6 +66,7 @@
       "style": "scss"
     }
   },
+  "nxCloudAccessToken": "MzhiMWMzMDQtZDM1Ny00NGFkLWI1NDQtZjA0Yjg3NTJlYjk4fHJlYWQtd3JpdGU=",
   "plugins": [
     {
       "plugin": "@nx/eslint/plugin",
