@@ -23,7 +23,7 @@ test('has subtitle', async ({ page }) => {
 });
 
 test('has add button', async ({ page }) => {
-  const button = page.getByRole('button', { name: 'Klant toevoegen' });
+  const button = page.getByRole('button', { name: 'Klant toevoegen2' });
   expect(button).toBeDefined();
 });
 
