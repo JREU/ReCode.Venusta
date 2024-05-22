@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
   displayName: 'sidebar',
-  preset: '../../../../jest.preset.js',
+  preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../../coverage/libs/sidebar',
   transform: {

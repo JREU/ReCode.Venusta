@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideMockStore } from '@ngrx/store/testing';
 import { SearchResultsComponent } from './search-results.component';
 
 describe('SearchResultsComponent', () => {
@@ -8,6 +9,7 @@ describe('SearchResultsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [SearchResultsComponent],
+      providers: [provideMockStore()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SearchResultsComponent);

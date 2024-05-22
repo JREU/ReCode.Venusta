@@ -6,7 +6,6 @@ import { CustomerFormComponent } from '@venusta/customer/ui/customer-form';
 import {
   customerFeature,
   customerPageActions,
-  CustomerState,
 } from '@venusta/portal/customer/data-access';
 import { Customer } from '@venusta/portal/customer/models';
 import { filterNullAndUndefined } from '@versure/utilities';
@@ -22,7 +21,7 @@ import { Observable } from 'rxjs';
 export class EditCustomerComponent implements OnInit {
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);
-  private readonly store = inject(Store<CustomerState>);
+  private readonly store = inject(Store);
   protected customer$!: Observable<Customer>;
 
   ngOnInit(): void {

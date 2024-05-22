@@ -7,7 +7,6 @@ import { CreateComponent } from '@venusta/portal/appointment/create';
 import {
   appointmentFeature,
   appointmentPageActions,
-  AppointmentState,
 } from '@venusta/portal/appointment/data-access';
 import { Appointment, TimeSlot } from '@venusta/portal/appointment/models';
 import { ScheduleComponent } from '@venusta/portal/appointment/ui/schedule';
@@ -30,7 +29,7 @@ import { map, Observable } from 'rxjs';
   styleUrl: './appointments.component.scss',
 })
 export class AppointmentsComponent implements OnInit {
-  private readonly store = inject(Store<AppointmentState>);
+  private readonly store = inject(Store);
 
   private appointments$!: Observable<Appointment[]>;
   protected events$!: Observable<EventSourceInput>;

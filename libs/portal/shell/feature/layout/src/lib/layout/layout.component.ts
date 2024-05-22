@@ -17,6 +17,4 @@ import { SidebarComponent } from '@venusta/portal/sidebar';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
 })
-export class LayoutComponent {
-  isExpanded = false;
-}
+export class LayoutComponent {}

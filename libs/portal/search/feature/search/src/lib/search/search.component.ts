@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import { Store } from "@ngrx/store";
-import { searchPageActions, SearchState } from "@venusta/portal/search/data-access";
+import { Component, inject } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { searchPageActions } from '@venusta/portal/search/data-access';
 
 @Component({
   selector: 'venusta-search',
@@ -12,16 +12,16 @@ import { searchPageActions, SearchState } from "@venusta/portal/search/data-acce
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
-  private readonly store = inject(Store<SearchState>);
+  private readonly store = inject(Store);
 
   protected searchForm = new FormGroup({
-    search: new FormControl<string | null>(null)
+    search: new FormControl<string | null>(null),
   });
 
   onSubmit(): void {
     const searchQuery = this.searchForm.value.search ?? null;
 
-    if(!searchQuery){
+    if (!searchQuery) {
       return;
     }
 
