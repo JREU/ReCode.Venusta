@@ -102,6 +102,9 @@
       "@venusta/portal/sidebar": [
         "libs/portal/sidebar/feature/sidebar/src/index.ts"
       ],
+      "@venusta/shared/calendar": [
+        "libs/shared/calendar/feature/calendar/src/index.ts"
+      ],
       "@venusta/shared/directives": [
         "libs/portal/shared/directives/src/index.ts"
       ],

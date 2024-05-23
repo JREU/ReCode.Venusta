@@ -11,7 +11,7 @@ import {
 import { Appointment, TimeSlot } from '@venusta/portal/appointment/models';
 import { ScheduleComponent } from '@venusta/portal/appointment/ui/schedule';
 import { SchedulerUtils } from '@venusta/portal/appointment/utils';
-import { CardComponent } from '@venusta/shared/ui';
+import { CalendarComponent } from '@venusta/shared/calendar';
 import { filterNullAndUndefined } from '@versure/utilities';
 import { map, Observable } from 'rxjs';
 
@@ -23,7 +23,7 @@ import { map, Observable } from 'rxjs';
     FullCalendarModule,
     ScheduleComponent,
     CreateComponent,
-    CardComponent,
+    CalendarComponent,
   ],
   templateUrl: './appointments.component.html',
   styleUrl: './appointments.component.scss',

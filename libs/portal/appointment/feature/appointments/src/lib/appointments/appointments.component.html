@@ -1,7 +1,1 @@
-<venusta-card class="appointments">
-  @if(events$ | async; as events){
-    <venusta-schedule [events]="events"
-                      (eventSelected)="onEventSelect($event)"
-                      (slotSelected)="onSlotSelect($event)"/>
-  }
-</venusta-card>
+<venusta-calendar />
