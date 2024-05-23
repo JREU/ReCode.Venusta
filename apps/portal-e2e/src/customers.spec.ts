@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
 test('customer link is active in menu', async ({ page }) => {
   const link = page.getByRole('link', { name: 'Klanten' });
   expect(
-    await link.evaluate(el => el.classList.contains('bg-gray-100')),
+    await link.evaluate(el => el.classList.contains('bg-slate-100')),
   ).toBeTruthy();
 });
 
