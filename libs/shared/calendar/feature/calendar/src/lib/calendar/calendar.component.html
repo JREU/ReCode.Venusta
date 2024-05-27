@@ -42,7 +42,7 @@
           </svg>
         </button>
       </div>
-      <div class="none md:ml-4 md:flex md:items-center">
+      <div class="hidden md:ml-4 md:items-center lg:flex">
         <!--        Dropdown-->
         <div class="relative">
           <button
@@ -94,19 +94,71 @@
           Toevoegen
         </button>
       </div>
+      <div class="relative ml-1 lg:hidden">
+        <button
+          type="button"
+          class="flex items-center border-transparent p-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="size-6 fill-slate-300">
+            <path
+              fill-rule="evenodd"
+              d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div
+          class="absolute right-0 z-10 mt-3 w-40 origin-top-right overflow-hidden rounded-md border bg-slate-50 shadow dark:border-slate-300 dark:bg-slate-600 dark:shadow-none">
+          <div class="py-1">
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-slate-900 dark:text-slate-100 hover:dark:bg-slate-800">
+              Nieuwe afspraak
+            </a>
+            <a
+              href="#"
+              class="block border-b border-t px-4 py-2 text-sm text-slate-900 dark:text-slate-100 hover:dark:bg-slate-800">
+              Vandaag
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-slate-900 dark:text-slate-100 hover:dark:bg-slate-800">
+              Dag view
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-slate-900 dark:text-slate-100 hover:dark:bg-slate-800">
+              Week view
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-slate-900 dark:text-slate-100 hover:dark:bg-slate-800">
+              Maand view
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-slate-900 dark:text-slate-100 hover:dark:bg-slate-800">
+              Jaar view
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <!--  View-->
   <div
     class="isolate flex flex-auto flex-col overflow-auto bg-white dark:bg-slate-900">
-    <div class="flex max-w-full flex-col sm:max-w-none md:max-w-full">
+    <div
+      class="flex max-w-full flex-col sm:max-w-none md:max-w-full"
+      style="width: 165%">
       <header
-        class="sticky top-0 z-30 flex-none shadow dark:border-b dark:border-b-slate-300 dark:shadow-none sm:pr-8">
+        class="sticky top-0 z-30 flex-none ring-1 ring-offset-0 dark:bg-slate-900 dark:ring-slate-600 sm:pr-8">
         <div
-          class="-mr-4 hidden grid-cols-7 border-r border-slate-300 text-sm leading-6 sm:grid">
+          class="-mr-px hidden grid-cols-7 divide-x border-r text-sm leading-6 sm:grid">
           <div class="col-end-1 w-14"></div>
           <div
-            class="flex items-center justify-center border-l border-r px-1 py-3">
+            class="flex items-center justify-center px-1 py-3 dark:divide-slate-300">
             <span>
               Ma
               <span class="font-semibold text-slate-900 dark:text-white">
@@ -114,7 +166,7 @@
               </span>
             </span>
           </div>
-          <div class="flex items-center justify-center border-r px-1 py-3">
+          <div class="flex items-center justify-center px-1 py-3">
             <span>
               Di
               <span class="font-semibold text-slate-900 dark:text-white">
@@ -122,15 +174,16 @@
               </span>
             </span>
           </div>
-          <div class="flex items-center justify-center border-r px-1 py-3">
-            <span>
+          <div class="flex items-center justify-center px-1 py-3">
+            <span class="flex items-baseline">
               Wo
-              <span class="font-semibold text-slate-900 dark:text-white">
+              <span
+                class="today ml-1.5 flex h-8 w-8 content-center items-center justify-center rounded-full bg-indigo-700 font-semibold text-white active:rounded-full active:bg-indigo-700">
                 12
               </span>
             </span>
           </div>
-          <div class="flex items-center justify-center border-r px-1 py-3">
+          <div class="flex items-center justify-center px-1 py-3">
             <span>
               Do
               <span class="font-semibold text-slate-900 dark:text-white">
@@ -138,7 +191,7 @@
               </span>
             </span>
           </div>
-          <div class="flex items-center justify-center border-r px-1 py-3">
+          <div class="flex items-center justify-center px-1 py-3">
             <span>
               Vr
               <span class="font-semibold text-slate-900 dark:text-white">
@@ -146,7 +199,7 @@
               </span>
             </span>
           </div>
-          <div class="flex items-center justify-center border-r px-1 py-3">
+          <div class="flex items-center justify-center px-1 py-3">
             <span>
               Za
               <span class="font-semibold text-slate-900 dark:text-white">
@@ -154,7 +207,7 @@
               </span>
             </span>
           </div>
-          <div class="flex items-center justify-center border-r px-1 py-3">
+          <div class="flex items-center justify-center px-1 py-3">
             <span>
               Zo
               <span class="font-semibold text-slate-900 dark:text-white">
@@ -164,6 +217,257 @@
           </div>
         </div>
       </header>
+      <div class="flex flex-auto">
+        <div
+          class="sticky left-0 z-10 w-14 flex-none ring-1 ring-offset-0 dark:bg-slate-900 dark:ring-slate-600"></div>
+        <div class="grid flex-auto grid-cols-1 grid-rows-1">
+          <div
+            class="col-start-1 col-end-2 row-start-1 grid divide-y"
+            style="grid-template-rows: repeat(48, minmax(3.5rem, 1fr))">
+            <div class="row-end-1 h-8"></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                00:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                01:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                02:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                03:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                04:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                05:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                06:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                07:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                08:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                09:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                10:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                11:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                12:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                13:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                14:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                15:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                16:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                17:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                18:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                19:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                20:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                21:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                22:00
+              </div>
+            </div>
+            <div></div>
+            <div>
+              <div
+                class="sticky left-0 z-20 -ml-14 -mt-2.5 w-14 pr-2 text-right text-xs leading-5">
+                23:00
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div
+            class="col-start-1 col-end-2 row-start-1 hidden grid-cols-7 grid-rows-1 divide-x sm:grid sm:grid-cols-7">
+            <div
+              class="col-start-1"
+              style="grid-row: 1 / -1"></div>
+            <div
+              class="col-start-2"
+              style="grid-row: 1 / -1"></div>
+            <div
+              class="col-start-3"
+              style="grid-row: 1 / -1"></div>
+            <div
+              class="col-start-4"
+              style="grid-row: 1 / -1"></div>
+            <div
+              class="col-start-5"
+              style="grid-row: 1 / -1"></div>
+            <div
+              class="col-start-6"
+              style="grid-row: 1 / -1"></div>
+            <div
+              class="col-start-7"
+              style="grid-row: 1 / -1"></div>
+            <div
+              class="col-start-8 w-8 border-r"
+              style="grid-row: 1 / -1"></div>
+          </div>
+          <ol
+            class="col-start-1 col-end-2 row-start-1 grid list-none sm:grid-cols-7 sm:pr-8"
+            style="
+              grid-template-rows: 1.75rem repeat(288, minmax(0px, 1fr)) auto;
+            ">
+            <li
+              class="relative mt-px flex sm:col-start-3"
+              style="grid-row: 74 / span 12">
+              <a
+                href="#"
+                class="absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-indigo-700 p-2 text-xs leading-5 hover:bg-indigo-500">
+                <p class="order-1 font-semibold text-white">Jop Reuvers</p>
+                <p class="order-2 text-white">Knippen</p>
+                <p class="m-0 text-white">
+                  <time datetime="2024-01-12T06:00">06:00</time>
+                </p>
+              </a>
+            </li>
+            <li
+              class="relative mt-px flex sm:col-start-3"
+              style="grid-row: 92 / span 30">
+              <a
+                href="#"
+                class="absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-indigo-700 p-2 text-xs leading-5 hover:bg-indigo-500">
+                <p class="order-1 font-semibold text-white">Emma Reuvers</p>
+                <p class="order-2 text-white">Knippen & kleuren</p>
+                <p class="m-0 text-white">
+                  <time datetime="2024-01-12T07:30">07:30</time>
+                </p>
+              </a>
+            </li>
+            <li
+              class="relative mt-px hidden sm:col-start-6 sm:flex"
+              style="grid-row: 122 / span 24">
+              <a
+                href="#"
+                class="absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-indigo-700 p-2 text-xs leading-5 hover:bg-indigo-500">
+                <p class="order-1 font-semibold text-white">L'oreal</p>
+                <p class="order-2 text-white">Bespreken korting</p>
+                <p class="m-0 text-white">
+                  <time datetime="2024-01-15T10:00">10:00</time>
+                </p>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
 </div>
